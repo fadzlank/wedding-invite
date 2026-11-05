@@ -364,11 +364,24 @@
   /* bottom bar in plum-lilac */
   .dock{background:linear-gradient(135deg,#7E5A86 0%,#68507A 55%,#56506F 100%)}
 
+  /* ================= painting behind the whole invite ================= */
+  html{background:#3e3a40}
+  body{background:transparent !important}
+  body::before{content:"";display:block !important;position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:#5d5a62 url(img/lilacpond.jpg) center/cover no-repeat}
+  .hero{background:none !important}
+  .veil{position:relative;margin:0 -30px;padding:0 30px 40px;
+    background:rgba(246,241,235,.80);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  .veil > .lace-sep:first-child{margin-top:-29px}
+  footer{background:none !important}
+  footer::before{background:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)) !important}
+  footer .lace-sep{top:-1px !important;transform:none !important}
+
   /* ================= round 2: paper, lace, painted orchids ================= */
   body{background:#F3EDE6 url(img/paper.jpg) repeat;background-size:600px}
   .page{padding:0 30px}
   .page::before,.page::after{content:"";position:absolute;top:0;bottom:0;width:24px;z-index:7;pointer-events:none;
-    background:url(img/lacev.png) 0 0/24px auto repeat-y,url(img/lilacpond_blur.jpg) 0 0/8px 1100px repeat-y}
+    background:url(img/lacev.png) 0 0/24px auto repeat-y}
   .page::before{left:0}
   .page::after{right:0;transform:scaleX(-1)}
   .music-fab{left:30px}
@@ -783,6 +796,7 @@
     <h1 class="names"><span id="bride"></span><span class="amp">&amp;</span><span id="groom"></span></h1>
     <div class="date-line" data-t="dateLong"></div>
   </header>
+  <div class="veil">
   <div class="lace-sep"></div>
 
   <section class="card invite">
@@ -934,6 +948,7 @@
     </form>
   </section>
 
+  </div>
   <footer>
     <div class="lace-sep up"></div>
     <img class="flora foot" src="img/orchids/lily_pair.png" alt="">
