@@ -439,7 +439,11 @@
   .copy{margin-left:8px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font:600 12px/1.4 "Mulish",sans-serif;color:var(--rose);vertical-align:3px}
   #ucapan{margin-top:48px}
   /* footer */
-  footer{margin:110px -30px 0;padding-top:110px}
+  footer{margin:40px -30px 0;padding-top:80px}
+  /* no empty space for messages that aren't showing */
+  .err:empty,.ok:empty{display:none}
+  #ucapan{padding-bottom:22px}
+  #wishForm .btn{margin-bottom:0}
   footer .lace-sep{position:absolute;left:0;right:0;top:-29px;margin:0}
   footer .flora.foot{left:50%;top:-112px;width:300px;transform:translateX(-50%);z-index:4}
 </style>
