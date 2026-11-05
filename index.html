@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
+  @font-face{font-family:"Great Vibes";src:url(fonts/greatvibes.woff2) format("woff2");font-display:swap}
   @font-face{font-family:"Pinyon Script";src:url(fonts/pinyon.woff2) format("woff2");font-display:swap}
   @font-face{font-family:"Cormorant Garamond";font-weight:400;src:url(fonts/corm-400-normal.woff2) format("woff2");font-display:swap}
   @font-face{font-family:"Cormorant Garamond";font-weight:500;src:url(fonts/corm-500-normal.woff2) format("woff2");font-display:swap}
@@ -93,7 +94,7 @@
   .parents .amp,.couple .amp{font:italic 500 20px/1.4 "Cormorant Garamond",serif;color:#C9A15A}
   .honor{font-size:12.5px;letter-spacing:.04em;color:var(--muted);margin:0 0 4px}
   .honor:empty{display:none}
-  .couple{margin:6px 0 4px;font:400 31px/1.3 "Pinyon Script",cursive;color:var(--rose)}
+  .couple{margin:6px 0 4px;font:400 31px/1.3 "Great Vibes",cursive;color:var(--rose)}
   .couple .amp{margin:2px 0}
   .note{margin-top:16px;background:var(--butter-wash);border-radius:var(--radius-sm);padding:12px 14px;color:#5E4A78;font-size:15px}
 
@@ -167,7 +168,7 @@
     linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 70%,rgba(0,0,0,.3))}
   .cv-inner{position:relative;height:100%;max-width:460px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;color:#fff;text-align:center}
   .cv-label{font:500 15px/1 "Cormorant SC",serif;letter-spacing:.18em;text-shadow:0 1px 10px rgba(0,0,0,.4)}
-  .cv-names{font:400 44px/1.15 "Pinyon Script",cursive;margin:10px 0 28px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+  .cv-names{font:400 44px/1.15 "Great Vibes",cursive;margin:10px 0 28px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
   .cv-to{margin-top:30px;font:500 15px/1.4 "Cormorant SC",serif;letter-spacing:.12em;text-shadow:0 1px 10px rgba(0,0,0,.45)}
   .cv-to b{display:block;font:500 italic 24px/1.3 "Cormorant Garamond",serif;letter-spacing:0;margin-top:2px}
   .cv-open{margin-top:22px;min-height:46px;padding:0 26px;border-radius:999px;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.08);
@@ -311,7 +312,7 @@
   :root{--bg:#F5F0EF;--ink:#4E3C55;--rose:#6E4A75;--gold:#B99A6A;--cream:#F7F2EF;--muted:#776E7E;--line:#E6DCE0}
   body{background:var(--bg) repeating-linear-gradient(-35deg,rgba(0,0,0,.012) 0 2px,transparent 2px 5px)}
   body::before{display:none}
-  h2{font:400 46px/1.05 "Pinyon Script",cursive;color:var(--ink)}
+  h2{font:400 46px/1.05 "Great Vibes",cursive;color:var(--ink)}
   .card{border-radius:6px;background:#FFFDFB;box-shadow:0 1px 0 rgba(185,154,106,.25),0 12px 30px -22px rgba(60,40,70,.35);border:1px solid rgba(185,154,106,.28)}
   .btn.primary{background:var(--rose)}
   /* hero: the painting, full height */
@@ -321,8 +322,8 @@
   .hero .garland{display:none}
   .bismillah{color:#fff;font-size:28px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
   .walimah{font:500 16px/1 "Cormorant SC",serif;letter-spacing:.2em;color:#fff;margin:10px 0 8px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
-  .names{font:400 70px/1.05 "Pinyon Script",cursive;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.4);margin:6px 0 14px}
-  .names .amp{font:400 42px/1 "Pinyon Script",cursive;color:#F1DCA6;margin:2px 0}
+  .names{font:400 70px/1.05 "Great Vibes",cursive;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.4);margin:6px 0 14px}
+  .names .amp{font:400 42px/1 "Great Vibes",cursive;color:#F1DCA6;margin:2px 0}
   .date-line{font:500 17px/1.4 "Cormorant SC",serif;letter-spacing:.18em;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}
   .torn{position:absolute;left:0;width:100%;height:30px;fill:var(--bg)}
   .torn.bottom{bottom:-1px}
@@ -334,7 +335,7 @@
   .parents{font:500 24px/1.3 "Cormorant Garamond",serif}
   .invite .guest{font:500 italic 30px/1.2 "Cormorant Garamond",serif;color:var(--rose)}
   .couple{color:var(--ink)}
-  .honor{font-family:"Cormorant SC",serif;font-size:14px;letter-spacing:.06em}
+  .honor{font-family:"Cormorant SC",serif;font-size:12.5px;letter-spacing:.03em;white-space:nowrap}
   /* countdown */
   .count div{background:transparent !important;border:1px solid rgba(185,154,106,.5);border-radius:4px}
   .count b{color:var(--ink)}
@@ -356,12 +357,87 @@
   footer::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.35))}
   footer > *{position:relative}
   footer .doa{color:#fff;font:italic 500 21px/1.45 "Cormorant Garamond",serif;text-shadow:0 1px 10px rgba(0,0,0,.4)}
-  footer #footNames{font:400 34px/1.2 "Pinyon Script",cursive;color:#fff;margin-top:6px}
+  footer #footNames{font:400 34px/1.2 "Great Vibes",cursive;color:#fff;margin-top:6px}
   footer .credit{color:rgba(255,255,255,.7)}
   footer .torn{fill:var(--bg)}
   .page{padding-bottom:0}
   /* bottom bar in plum-lilac */
   .dock{background:linear-gradient(135deg,#7E5A86 0%,#68507A 55%,#56506F 100%)}
+
+  /* ================= round 2: paper, lace, painted orchids ================= */
+  body{background:#F3EDE6 url(img/paper.jpg) repeat;background-size:600px}
+  .page{padding:0 30px}
+  .page::before,.page::after{content:"";position:absolute;top:0;bottom:0;width:24px;z-index:7;pointer-events:none;
+    background:url(img/lacev.png) 0 0/24px auto repeat-y,url(img/lilacpond_blur.jpg) 0 0/8px 1100px repeat-y}
+  .page::before{left:0}
+  .page::after{right:0;transform:scaleX(-1)}
+  .music-fab{left:30px}
+  .lang{right:30px}
+  .spray,.garland{display:none}
+  .lace-sep{position:relative;z-index:3;height:30px;margin:0 -30px;background:url(img/laceh.png) 0 0/auto 30px repeat-x;pointer-events:none}
+  .lace-sep.up{transform:scaleY(-1)}
+  .flora{position:absolute;pointer-events:none;z-index:2;height:auto;filter:drop-shadow(0 6px 10px rgba(60,40,60,.18))}
+  /* hero */
+  .hero{margin:0 -30px;padding-left:34px;padding-right:34px}
+  .hero-flora{position:absolute;top:0;width:40%;max-width:200px;z-index:1;pointer-events:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.3))}
+  .hero-flora.left{left:-4px}
+  .hero-flora.right{right:-4px;transform:scaleX(-1)}
+  /* invitation: a paper card framed in lace */
+  .card.invite{margin-top:80px;padding:58px 4px 30px;border-radius:0;border:20px solid transparent;border-image:url(img/laceframe.png) 34 round;
+    background:#FBF8F2 url(img/papercard.jpg) padding-box;box-shadow:none;filter:drop-shadow(0 10px 16px rgba(60,40,60,.16))}
+  .card.invite .flora.top{left:50%;top:-96px;width:230px;transform:translateX(-50%)}
+  .invite .salam{font:600 17px/1.4 "Cormorant Garamond",serif;color:var(--ink)}
+  .lead.oneline{white-space:nowrap;overflow:hidden;font:italic 500 16px/1.4 "Cormorant Garamond",serif;max-width:none;color:#6A5A70}
+  .parents{font:500 22px/1.3 "Cormorant Garamond",serif}
+  .invite .guest{font:500 italic 23px/1.25 "Cormorant Garamond",serif;color:var(--rose);margin-bottom:10px}
+  .couple{font:400 34px/1.2 "Great Vibes",cursive;color:var(--ink);margin-top:8px}
+  .couple span{display:block;white-space:nowrap}
+  .couple .amp{font-size:26px;color:var(--gold)}
+  /* date, time and location: one seamless section */
+  .details{position:relative;text-align:center;margin-top:56px;padding:6px 0 4px}
+  .details h2{margin:26px 0 6px}
+  .details > h2:first-of-type{margin-top:0}
+  .details .sc{font:500 17px/1.6 "Cormorant SC",serif;letter-spacing:.14em;color:#6A5A70;margin:0}
+  .details .flora.side{right:-40px;top:-56px;width:160px;transform:rotate(10deg)}
+  .details .loc{padding-top:6px}
+  .seal{background:radial-gradient(circle at 35% 30%,#fff,#EFE7F3 75%)}
+  .seal img{width:92px;height:auto}
+  /* RSVP */
+  #rsvp{margin-top:48px}
+  .stepper button:disabled{opacity:.35;cursor:default}
+  /* programme over the painting */
+  .itin{margin:56px -30px 0}
+  .itin > h2{text-align:center;margin:0 0 4px}
+  .itin .ornament{margin-bottom:14px}
+  .itin .lace-sep{margin:0}
+  .itin .lace-sep.up{margin-bottom:-1px}
+  .itin-paint .torn{display:none}
+  /* dress code */
+  .dress{text-align:center;margin-top:56px}
+  .dress .sc{font:500 17px/1.5 "Cormorant SC",serif;letter-spacing:.14em;color:#6A5A70;margin:0 0 16px}
+  .dress-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .dress-col{background:#FBF8F2 url(img/papercard.jpg);border:1px solid rgba(185,154,106,.35);border-radius:6px;padding:16px 8px 14px}
+  .dress-col b{display:block;font:600 15px/1.2 "Cormorant SC",serif;letter-spacing:.12em;color:var(--ink);margin-bottom:12px}
+  .dress-col .dots{display:flex;justify-content:center;gap:7px;margin:0 0 12px}
+  .dress-col .dots i{position:relative;width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14),0 1px 2px rgba(0,0,0,.12)}
+  .dress-col.dont .dots i::after{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;width:1.6px;margin-left:-.8px;background:#9B3B5E;transform:rotate(45deg)}
+  .dress-col span{display:block;font:italic 500 17px/1.3 "Cormorant Garamond",serif;color:var(--muted)}
+  /* countdown sits right above the gallery */
+  .countdown{margin-top:56px}
+  .gallery .ph img{width:62%;height:auto;display:block;margin:0 auto 10px}
+  /* gifts */
+  #hadiah{text-align:center;margin-top:48px}
+  #hadiah .lead{margin:0 auto 14px}
+  .qr{display:block;width:210px;max-width:80%;margin:6px auto 16px;border-radius:10px;box-shadow:0 6px 18px -8px rgba(60,40,60,.4)}
+  .bank-name{font:600 19px/1.3 "Cormorant Garamond",serif;color:var(--ink)}
+  .bank-acc{margin:6px 0;font:700 20px/1.3 "Mulish",sans-serif;letter-spacing:.06em;color:var(--ink)}
+  .bank-holder{font:500 italic 17px/1.3 "Cormorant Garamond",serif;color:var(--muted)}
+  .copy{margin-left:8px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font:600 12px/1.4 "Mulish",sans-serif;color:var(--rose);vertical-align:3px}
+  #ucapan{margin-top:48px}
+  /* footer */
+  footer{margin:110px -30px 0;padding-top:110px}
+  footer .lace-sep{position:absolute;left:0;right:0;top:-29px;margin:0}
+  footer .flora.foot{left:50%;top:-118px;width:240px;transform:translateX(-50%);z-index:4}
 </style>
 </head>
 <body>
@@ -658,9 +734,9 @@
           <use href="#orchid" x="86" y="-8" width="48" height="48" style="color:#E6D8F2"/>
           <use href="#orBud" x="68" y="8" width="8" height="11" transform="rotate(-60 72 13)" style="color:#E6D8F2"/>
           <use href="#orBud" x="144" y="8" width="8" height="11" transform="rotate(60 148 13)" style="color:#E6D8F2"/>
-          <text id="cardBride" x="110" y="96" text-anchor="middle" font-family="Pinyon Script" font-size="34" fill="#4E3C55"></text>
-          <text x="110" y="120" text-anchor="middle" font-family="Pinyon Script" font-size="22" fill="#B99A6A">&amp;</text>
-          <text id="cardGroom" x="110" y="150" text-anchor="middle" font-family="Pinyon Script" font-size="34" fill="#4E3C55"></text>
+          <text id="cardBride" x="110" y="96" text-anchor="middle" font-family="Great Vibes" font-size="34" fill="#4E3C55"></text>
+          <text x="110" y="120" text-anchor="middle" font-family="Great Vibes" font-size="22" fill="#B99A6A">&amp;</text>
+          <text id="cardGroom" x="110" y="150" text-anchor="middle" font-family="Great Vibes" font-size="34" fill="#4E3C55"></text>
           <text x="110" y="178" text-anchor="middle" font-family="Cormorant Garamond" font-weight="500" font-size="14" letter-spacing="1.4" fill="#4E3C55">31 . 01 . 2027</text>
         </svg>
       </div>
@@ -701,27 +777,20 @@
 <div id="notFound" class="state hidden"><p data-t="notFound"></p></div>
 
 <main id="app" class="page hidden">
-
   <header class="hero">
-    <svg class="garland" viewBox="0 -40 400 270" aria-hidden="true"><use href="#garland"/></svg>
+    <img class="hero-flora left" src="img/orchids/spray_white.png" alt="">
+    <img class="hero-flora right" src="img/orchids/spray_lilac.png" alt="">
     <div class="bismillah" lang="ar">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
     <div class="walimah" data-t="walimah"></div>
     <h1 class="names"><span id="bride"></span><span class="amp">&amp;</span><span id="groom"></span></h1>
     <div class="date-line" data-t="dateLong"></div>
-    <svg class="torn bottom" viewBox="0 0 390 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H390 V10 L390.0 13.3 L385.0 13.6 L379.3 12.3 L373.6 6.7 L369.7 12.8 L365.1 12.3 L362.7 9.3 L359.7 9.9 L355.4 6.3 L352.5 8.4 L346.8 12.5 L344.2 13.1 L341.7 12.2 L339.1 8.3 L333.7 10.7 L330.8 16.7 L325.3 12.9 L319.5 15.7 L314.8 14.1 L309.0 18.2 L303.1 20.1 L299.9 16.5 L297.3 15.0 L295.0 16.1 L290.6 13.8 L285.9 15.8 L282.6 18.8 L278.7 14.8 L274.8 16.9 L272.6 18.4 L270.5 16.5 L265.1 10.4 L259.9 11.8 L255.6 8.5 L253.4 9.4 L247.6 8.6 L242.6 13.1 L236.8 8.6 L233.4 9.7 L228.3 6.8 L223.3 11.8 L217.9 7.0 L212.1 8.1 L208.7 12.3 L203.1 11.4 L197.4 13.9 L194.1 12.9 L191.4 11.8 L188.8 16.5 L182.8 13.8 L180.6 19.8 L176.5 16.3 L173.5 17.8 L168.2 17.1 L164.5 14.4 L158.9 14.1 L154.9 19.4 L152.4 18.4 L146.6 17.0 L141.4 12.5 L137.7 12.1 L132.3 12.1 L128.5 16.3 L123.1 15.2 L119.3 11.1 L114.4 10.4 L111.2 9.5 L108.6 9.1 L102.7 12.8 L98.2 9.5 L94.8 6.7 L91.7 11.7 L86.2 9.2 L81.1 12.8 L76.3 12.8 L71.3 11.5 L66.5 11.9 L62.5 16.0 L57.8 13.6 L52.0 17.0 L47.7 13.1 L43.5 15.3 L38.8 17.1 L33.5 18.5 L28.3 16.3 L23.7 18.8 L18.4 15.5 L13.1 18.4 L8.3 18.4 L2.5 14.1 L0.0 14.0 Z" transform="translate(0 30) scale(1 -1)"/></svg>
   </header>
-
-  <svg class="divider" viewBox="0 0 150 30" aria-hidden="true">
-    <path d="M4 15 H56 M94 15 H146" stroke="#C9A15A" stroke-width="1"/>
-    <use href="#blossom" x="54" y="7" width="16" height="16" style="color:#D6C6EA"/>
-    <use href="#orchid" x="63" y="1" width="28" height="28" style="color:#FFFFFF"/>
-    <use href="#blossom" x="84" y="7" width="16" height="16" style="color:#C9DDE4"/>
-  </svg>
+  <div class="lace-sep"></div>
 
   <section class="card invite">
-    <svg class="spray tr" viewBox="0 0 120 90" aria-hidden="true"><use href="#spray"/></svg>
+    <img class="flora top" src="img/orchids/cluster.png" alt="">
     <p class="salam" data-t="salam"></p>
-    <p class="lead" data-t="bismillahText"></p>
+    <p class="lead oneline" data-t="bismillahText"></p>
     <div class="parents"><span id="father"></span><span class="amp">&amp;</span><span id="mother"></span></div>
     <p class="lead" data-t="inviteLead"></p>
     <p class="honor" data-t="honorifics"></p>
@@ -731,41 +800,16 @@
     <div id="note" class="note hidden"></div>
   </section>
 
-  <section>
-    <h2 data-t="countTitle"></h2>
-    <div class="count" id="count">
-      <div><b id="cd-d">0</b><span data-t="days"></span></div>
-      <div><b id="cd-h">0</b><span data-t="hours"></span></div>
-      <div><b id="cd-m">0</b><span data-t="mins"></span></div>
-      <div><b id="cd-s">0</b><span data-t="secs"></span></div>
-    </div>
-  </section>
-
-  <section class="itin" id="itin">
-    <div class="itin-cream">
-      <h2 data-t="dateTitle"></h2>
-      <p class="sc"><span data-t="tDay"></span><br><span data-t="tDate"></span></p>
-      <h2 data-t="timeTitle"></h2>
-      <p class="sc" id="timeRange"></p>
-    </div>
-    <div class="itin-paint" id="itinPaint">
-      <svg class="itin-line" id="itinLine" aria-hidden="true"><path id="wind" d="M-20 4 C90 10 140 50 130 100 C120 160 280 170 270 250 C262 320 120 340 150 464" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>
-      <ul class="stops" id="schedule"></ul>
-      <svg class="torn top" viewBox="0 0 390 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H390 V10 L390.0 13.3 L385.0 13.6 L379.3 12.3 L373.6 6.7 L369.7 12.8 L365.1 12.3 L362.7 9.3 L359.7 9.9 L355.4 6.3 L352.5 8.4 L346.8 12.5 L344.2 13.1 L341.7 12.2 L339.1 8.3 L333.7 10.7 L330.8 16.7 L325.3 12.9 L319.5 15.7 L314.8 14.1 L309.0 18.2 L303.1 20.1 L299.9 16.5 L297.3 15.0 L295.0 16.1 L290.6 13.8 L285.9 15.8 L282.6 18.8 L278.7 14.8 L274.8 16.9 L272.6 18.4 L270.5 16.5 L265.1 10.4 L259.9 11.8 L255.6 8.5 L253.4 9.4 L247.6 8.6 L242.6 13.1 L236.8 8.6 L233.4 9.7 L228.3 6.8 L223.3 11.8 L217.9 7.0 L212.1 8.1 L208.7 12.3 L203.1 11.4 L197.4 13.9 L194.1 12.9 L191.4 11.8 L188.8 16.5 L182.8 13.8 L180.6 19.8 L176.5 16.3 L173.5 17.8 L168.2 17.1 L164.5 14.4 L158.9 14.1 L154.9 19.4 L152.4 18.4 L146.6 17.0 L141.4 12.5 L137.7 12.1 L132.3 12.1 L128.5 16.3 L123.1 15.2 L119.3 11.1 L114.4 10.4 L111.2 9.5 L108.6 9.1 L102.7 12.8 L98.2 9.5 L94.8 6.7 L91.7 11.7 L86.2 9.2 L81.1 12.8 L76.3 12.8 L71.3 11.5 L66.5 11.9 L62.5 16.0 L57.8 13.6 L52.0 17.0 L47.7 13.1 L43.5 15.3 L38.8 17.1 L33.5 18.5 L28.3 16.3 L23.7 18.8 L18.4 15.5 L13.1 18.4 L8.3 18.4 L2.5 14.1 L0.0 14.0 Z"/></svg>
-    </div>
-  </section>
-
-  <section class="card" id="gallerySec">
-    <h2 data-t="galleryTitle"></h2>
-    <div class="gallery" id="gallery" tabindex="0" aria-label="Gallery"></div>
-    <div class="dots" id="dots"></div>
-  </section>
-
-  <section class="card loc" id="loc">
-    <svg class="spray tl" viewBox="0 0 120 90" aria-hidden="true"><use href="#spray"/></svg>
-    <h2 data-t="locTitle"></h2>
+  <section class="details" id="details">
+    <img class="flora side" src="img/orchids/cluster2.png" alt="">
+    <h2 data-t="dateTitle"></h2>
+    <p class="sc"><span data-t="tDay"></span><br><span data-t="tDate"></span></p>
+    <h2 data-t="timeTitle"></h2>
+    <p class="sc" id="timeRange"></p>
+    <div class="loc" id="loc">
+      <h2 data-t="locTitle"></h2>
     <div class="seal-wrap" id="sealed">
-      <div class="seal"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orchid" width="100" height="100" style="color:#FFFFFF"/></svg></div>
+      <div class="seal"><img src="img/orchids/single_white1.png" alt=""></div>
       <div class="area"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><span id="areaText"></span></div>
       <span class="seal-blur" aria-hidden="true">Dewan ••••• •••••••</span>
       <p class="seal-text" id="sealText"></p>
@@ -779,12 +823,11 @@
       </div>
       <a class="btn ghost full" id="calBtn" target="_blank" rel="noopener" data-t="calendar"></a>
     </div>
+    </div>
   </section>
 
   <section class="card" id="rsvp">
-    <svg class="spray bl" viewBox="0 0 120 90" aria-hidden="true"><use href="#spray"/></svg>
     <h2 data-t="rsvpTitle"></h2>
-
     <div id="summary" class="summary hidden">
       <div class="big" id="summaryText"></div>
       <p class="hint" id="summaryDetail"></p>
@@ -807,24 +850,78 @@
       <div id="paxFields" class="hidden">
         <fieldset>
           <legend data-t="adults"></legend>
-          <div class="choice two">
-            <label class="opt"><input type="radio" name="adults" value="1" checked><span data-t="justMe"></span></label>
-            <label class="opt"><input type="radio" name="adults" value="2"><span data-t="mePlus"></span></label>
+          <div class="stepper">
+            <button type="button" id="adultMinus" aria-label="−">−</button>
+            <output id="adultsOut" aria-live="polite">1</output>
+            <button type="button" id="adultPlus" aria-label="+">+</button>
           </div>
+          <p class="hint" id="adultHint"></p>
         </fieldset>
-        <fieldset>
+        <fieldset id="kidsField">
           <legend data-t="children"></legend>
           <div class="stepper">
             <button type="button" id="kidMinus" aria-label="−">−</button>
             <output id="kids" aria-live="polite">0</output>
             <button type="button" id="kidPlus" aria-label="+">+</button>
           </div>
+          <p class="hint" id="kidHint"></p>
         </fieldset>
       </div>
 
       <button type="submit" class="btn primary full" id="submitBtn" data-t="submit"></button>
       <p class="err" id="err" role="alert"></p>
     </form>
+  </section>
+
+  <section class="itin" id="itin">
+    <h2 data-t="scheduleTitle"></h2>
+    <div class="lace-sep up"></div>
+    <div class="itin-paint" id="itinPaint">
+      <svg class="itin-line" id="itinLine" aria-hidden="true"><path id="wind" d="M-20 4 C90 10 140 50 130 100 C120 160 280 170 270 250 C262 320 120 340 150 464" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>
+      <ul class="stops" id="schedule"></ul>
+    </div>
+    <div class="lace-sep"></div>
+  </section>
+
+  <section class="dress" id="dress">
+    <h2 data-t="dressTitle"></h2>
+    <p class="sc" data-t="dressCode"></p>
+    <div class="dress-grid">
+      <div class="dress-col"><b data-t="dressDo"></b>
+        <div class="dots"><i style="background:#B9A6D3"></i><i style="background:#E7A3BA"></i><i style="background:#9FB590"></i><i style="background:#C9A15A"></i><i style="background:#7E5A86"></i></div>
+        <span data-t="dressDoText"></span></div>
+      <div class="dress-col dont"><b data-t="dressDont"></b>
+        <div class="dots"><i style="background:#FFFFFF"></i><i style="background:#BFDDF5"></i><i style="background:#FBEFA6"></i></div>
+        <span data-t="dressDontText"></span></div>
+    </div>
+  </section>
+
+  <section class="countdown">
+    <h2 data-t="countTitle"></h2>
+    <div class="count" id="count">
+      <div><b id="cd-d">0</b><span data-t="days"></span></div>
+      <div><b id="cd-h">0</b><span data-t="hours"></span></div>
+      <div><b id="cd-m">0</b><span data-t="mins"></span></div>
+      <div><b id="cd-s">0</b><span data-t="secs"></span></div>
+    </div>
+  </section>
+
+  <section class="card" id="gallerySec">
+    <h2 data-t="galleryTitle"></h2>
+    <div class="gallery" id="gallery" tabindex="0" aria-label="Gallery"></div>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <section class="card" id="hadiah">
+    <h2 data-t="giftTitle"></h2>
+    <p class="lead" data-t="giftText"></p>
+    <img class="qr hidden" id="giftQr" alt="DuitNow QR">
+    <div class="bank hidden" id="giftBank">
+      <div class="bank-name" id="giftBankName"></div>
+      <div class="bank-acc"><span id="giftAccNo"></span> <button type="button" class="copy" id="giftCopy" data-t="copy"></button></div>
+      <div class="bank-holder" id="giftAccName"></div>
+    </div>
+    <p class="hint hidden" id="giftSoon" data-t="giftSoon"></p>
   </section>
 
   <section class="card" id="ucapan">
@@ -840,7 +937,8 @@
   </section>
 
   <footer>
-    <svg class="torn top" viewBox="0 0 390 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H390 V10 L390.0 13.3 L385.0 13.6 L379.3 12.3 L373.6 6.7 L369.7 12.8 L365.1 12.3 L362.7 9.3 L359.7 9.9 L355.4 6.3 L352.5 8.4 L346.8 12.5 L344.2 13.1 L341.7 12.2 L339.1 8.3 L333.7 10.7 L330.8 16.7 L325.3 12.9 L319.5 15.7 L314.8 14.1 L309.0 18.2 L303.1 20.1 L299.9 16.5 L297.3 15.0 L295.0 16.1 L290.6 13.8 L285.9 15.8 L282.6 18.8 L278.7 14.8 L274.8 16.9 L272.6 18.4 L270.5 16.5 L265.1 10.4 L259.9 11.8 L255.6 8.5 L253.4 9.4 L247.6 8.6 L242.6 13.1 L236.8 8.6 L233.4 9.7 L228.3 6.8 L223.3 11.8 L217.9 7.0 L212.1 8.1 L208.7 12.3 L203.1 11.4 L197.4 13.9 L194.1 12.9 L191.4 11.8 L188.8 16.5 L182.8 13.8 L180.6 19.8 L176.5 16.3 L173.5 17.8 L168.2 17.1 L164.5 14.4 L158.9 14.1 L154.9 19.4 L152.4 18.4 L146.6 17.0 L141.4 12.5 L137.7 12.1 L132.3 12.1 L128.5 16.3 L123.1 15.2 L119.3 11.1 L114.4 10.4 L111.2 9.5 L108.6 9.1 L102.7 12.8 L98.2 9.5 L94.8 6.7 L91.7 11.7 L86.2 9.2 L81.1 12.8 L76.3 12.8 L71.3 11.5 L66.5 11.9 L62.5 16.0 L57.8 13.6 L52.0 17.0 L47.7 13.1 L43.5 15.3 L38.8 17.1 L33.5 18.5 L28.3 16.3 L23.7 18.8 L18.4 15.5 L13.1 18.4 L8.3 18.4 L2.5 14.1 L0.0 14.0 Z"/></svg>
+    <div class="lace-sep up"></div>
+    <img class="flora foot" src="img/orchids/cluster.png" alt="">
     <div class="doa" data-t="doa"></div>
     <div id="footNames"></div>
   </footer>
@@ -851,21 +949,21 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.2l1.6 4-2 1.3a11 11 0 0 0 5 5l1.3-2 4 1.6V17a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
     <span data-t="navContact"></span>
   </button>
-  <button type="button" data-go="loc">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
-    <span data-t="navLoc"></span>
+  <button type="button" data-go="rsvp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+    <span data-t="navRsvp"></span>
   </button>
   <a id="dockCal" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M16 3v3M8 3v3M3 10h18M12 13.5v4M10 15.5h4"/></svg>
     <span data-t="navCal"></span>
   </a>
-  <button type="button" data-go="rsvp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
-    <span data-t="navRsvp"></span>
+  <button type="button" data-go="loc">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
+    <span data-t="navLoc"></span>
   </button>
-  <button type="button" data-go="ucapan">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12.5a7.5 7.5 0 0 1-11 6.6L4 20.5l1.4-4.6A7.5 7.5 0 1 1 20 12.5z"/><path d="M12.5 15.6s-3-1.8-3-3.8a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2-3 3.8-3 3.8z"/></svg>
-    <span data-t="navWish"></span>
+  <button type="button" data-go="hadiah">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><path d="M14 14h2.5v2.5H14zM18 18h2.5v2.5H18zM14 18.5h2M18.5 14h2"/></svg>
+    <span data-t="navGift"></span>
   </button>
 </nav>
 <button type="button" class="music-fab hidden" id="musicBtn" aria-pressed="false">
@@ -934,6 +1032,9 @@ const CONFIG = {
     { time: "4:00",  ms: "Majlis bersurai",   en: "Event ends" },
   ],
 
+  // Gifts / QR: put your DuitNow QR image at img/qr.png and fill in the bank details ("" = hidden)
+  gift: { qr: "img/qr.png", bank: "", accountName: "", accountNo: "" },
+
   // "Hubungi" contacts (Malaysian numbers, written as you would dial them)
   contacts: [
     { name: "Diana Ibrahim", ms: "Ibu Pengantin",  en: "Mother of the bride", phone: "019 700 0686" },
@@ -952,7 +1053,7 @@ const T = {
     bismillahText: "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang",
     inviteLead: "Dengan penuh rasa kesyukuran, kami ingin menjemput",
     honorifics: "Dato' | Datin | Tuan | Puan | Encik | Cik",
-    inviteTo: "seisi keluarga hadir ke majlis perkahwinan anakanda kami",
+    inviteTo: "ke majlis perkahwinan anakanda kami",
     dear: "Buat",
     inviteText: "Dengan penuh kesyukuran ke hadrat Ilahi, kami dengan segala hormatnya menjemput anda sekeluarga ke majlis perkahwinan kami.",
     countTitle: "Menghitung hari",
@@ -1001,17 +1102,24 @@ const T = {
     savedLink: "Pautan ini kini khas untuk anda. Buka semula pautan yang sama untuk tukar jawapan.",
     coverFrom: "Sepucuk warkah daripada", tapOpen: "Sentuh sampul untuk membuka",
     dateTitle: "Tarikh", timeTitle: "Masa", tDay: "Ahad", tDate: "31 Januari 2027",
+    scheduleTitle: "Atur Cara",
+    dressTitle: "Kod Pakaian", dressCode: "Pakaian tradisional", dressDo: "Digalakkan", dressDoText: "Sebarang warna lain",
+    dressDont: "Mohon elakkan", dressDontText: "Putih, biru muda & kuning muda",
+    giftTitle: "Hadiah", giftText: "Kehadiran dan doa anda sudah cukup bermakna. Jika ingin memberi hadiah, boleh melalui:",
+    giftSoon: "Butiran akan dikongsi tidak lama lagi.", copy: "Salin", copied: "Disalin",
+    maxAdults: (n) => `Maksimum ${n} dewasa untuk jemputan ini`, maxKids: (n) => `Maksimum ${n} kanak-kanak`,
+    navGift: "Hadiah",
     navContact: "Hubungi", contactTitle: "Hubungi kami", close: "Tutup", call: "Telefon", navLoc: "Lokasi", navCal: "Kalendar", navRsvp: "RSVP", navWish: "Ucapan",
     locale: "ms-MY",
   },
   en: {
-    walimah: "Walimatul Urus",
+    walimah: "The Wedding Reception of",
     dateLong: "Sunday, 31 January 2027",
     salam: "Assalamualaikum & Warm Greetings",
     bismillahText: "In the name of Allah, the Most Gracious, the Most Merciful",
     inviteLead: "With gratitude to Allah, we cordially invite",
     honorifics: "",
-    inviteTo: "and family to the wedding of our beloved daughter",
+    inviteTo: "to the wedding reception of our beloved daughter",
     dear: "Dear",
     inviteText: "With gratitude to Allah, we warmly invite you and your family to celebrate our wedding with us.",
     countTitle: "Counting the days",
@@ -1060,13 +1168,20 @@ const T = {
     savedLink: "This link is now your personal invite. Open the same link again to change your answer.",
     coverFrom: "A letter from", tapOpen: "Tap the envelope to open",
     dateTitle: "Date", timeTitle: "Time", tDay: "Sunday", tDate: "31 January 2027",
+    scheduleTitle: "Programme",
+    dressTitle: "Dress Code", dressCode: "Traditional attire", dressDo: "Do", dressDoText: "Any other colour",
+    dressDont: "Please avoid", dressDontText: "White, baby blue & baby yellow",
+    giftTitle: "Gifts", giftText: "Your presence and prayers mean the most to us. Should you wish to give a gift:",
+    giftSoon: "Details will be shared soon.", copy: "Copy", copied: "Copied",
+    maxAdults: (n) => `Up to ${n} adult${n > 1 ? "s" : ""} for this invitation`, maxKids: (n) => `Up to ${n} child${n > 1 ? "ren" : ""}`,
+    navGift: "Gifts",
     navContact: "Contact", contactTitle: "Contact us", close: "Close", call: "Call", navLoc: "Location", navCal: "Calendar", navRsvp: "RSVP", navWish: "Wishes",
     locale: "en-GB",
   },
 };
 
 /* Demo data: used only for ?g=demo. Never put the real venue here. */
-const DEMO_INVITE = { name: "Aunty Rosnah", language: "ms", note: null, is_public: false,
+const DEMO_INVITE = { name: "Aunty Rosnah sekeluarga", language: "ms", note: null, is_public: false, max_adults: 2, max_children: null,
   attending: null, adults: null, children: null, venue: null };
 const DEMO_VENUE = { name: "Dewan Contoh", address: "Alamat contoh, Selangor",
   waze_url: "https://waze.com", maps_url: "https://maps.google.com" };
@@ -1094,9 +1209,7 @@ const t = (k) => T[lang][k];
 
 function fmtTime(hm) {
   const [h, m] = hm.split(":").map(Number);
-  if (lang === "en") return `${h}:${String(m).padStart(2, "0")}${h < 12 && h >= 8 ? "am" : "pm"}`;
-  const ms = (h >= 8 && h < 12) ? t("am") : (h === 12 ? "tgh hari" : t("pm"));
-  return `${h}:${String(m).padStart(2, "0")} ${ms}`;
+  return `${h}:${String(m).padStart(2, "0")} ${h >= 8 && h < 12 ? "AM" : "PM"}`;
 }
 
 function render() {
@@ -1111,6 +1224,7 @@ function render() {
   $("nameField").classList.toggle("hidden", !invite.is_public);
   $("rsvpName").placeholder = t("yourNameHint");
   $("guestName").textContent = shownName;
+  renderGift(); paxLimits(); requestAnimationFrame(fitOneLine);
   $("father").textContent = CONFIG.father; $("mother").textContent = CONFIG.mother;
   $("brideFull").textContent = CONFIG.brideFull; $("groomFull").textContent = CONFIG.groomFull;
   $("envGuest").textContent = shownName;
@@ -1186,8 +1300,8 @@ function tick() {
 function prefillForm() {
   document.querySelectorAll('input[name="attend"]').forEach(r => r.checked =
     (invite.attending === true && r.value === "yes") || (invite.attending === false && r.value === "no"));
-  document.querySelectorAll('input[name="adults"]').forEach(r => r.checked = String(invite.adults || 1) === r.value);
-  kids = invite.children || 0; $("kids").textContent = kids;
+  adults = Math.min(maxAdults(), invite.adults || 1); $("adultsOut").textContent = adults;
+  kids = Math.min(maxKids(), invite.children || 0); $("kids").textContent = kids; paxLimits();
   $("paxFields").classList.toggle("hidden", invite.attending !== true);
 }
 
@@ -1197,7 +1311,7 @@ async function submitRsvp(e) {
   const att = document.querySelector('input[name="attend"]:checked');
   if (!att) { $("err").textContent = t("pickOne"); return; }
   const attending = att.value === "yes";
-  const adults = Number(document.querySelector('input[name="adults"]:checked').value);
+  
   const hadVenue = !!invite.venue;
   const myName = $("rsvpName").value.trim();
   if (invite.is_public && !myName) { $("err").textContent = t("needName"); $("rsvpName").focus(); return; }
@@ -1244,8 +1358,21 @@ document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click
 document.querySelectorAll('input[name="attend"]').forEach(r => r.addEventListener("change", () => {
   $("paxFields").classList.toggle("hidden", r.value !== "yes" || !r.checked);
 }));
-$("kidMinus").addEventListener("click", () => { kids = Math.max(0, kids - 1); $("kids").textContent = kids; });
-$("kidPlus").addEventListener("click", () => { kids += 1; $("kids").textContent = kids; });
+/* per-guest limits (set in Supabase: max_adults / max_children) */
+let adults = 1;
+const maxAdults = () => Math.max(1, (invite && invite.max_adults) || 2);
+const maxKids = () => (invite && invite.max_children != null) ? invite.max_children : 20;
+function paxLimits() {
+  $("adultHint").textContent = t("maxAdults")(maxAdults());
+  $("kidsField").classList.toggle("hidden", maxKids() === 0);
+  $("kidHint").textContent = (invite && invite.max_children != null && invite.max_children > 0) ? t("maxKids")(invite.max_children) : "";
+  $("adultMinus").disabled = adults <= 1; $("adultPlus").disabled = adults >= maxAdults();
+  $("kidMinus").disabled = kids <= 0; $("kidPlus").disabled = kids >= maxKids();
+}
+$("adultMinus").addEventListener("click", () => { adults = Math.max(1, adults - 1); $("adultsOut").textContent = adults; paxLimits(); });
+$("adultPlus").addEventListener("click", () => { adults = Math.min(maxAdults(), adults + 1); $("adultsOut").textContent = adults; paxLimits(); });
+$("kidMinus").addEventListener("click", () => { kids = Math.max(0, kids - 1); $("kids").textContent = kids; paxLimits(); });
+$("kidPlus").addEventListener("click", () => { kids = Math.min(maxKids(), kids + 1); $("kids").textContent = kids; paxLimits(); });
 $("changeBtn").addEventListener("click", () => { editing = true; render(); prefillForm(); });
 $("form").addEventListener("submit", submitRsvp);
 
@@ -1416,7 +1543,7 @@ function startSparkles() {
 
 /* highlight the bar item for the section on screen */
 function setupActiveNav() {
-  const ids = ["loc", "rsvp", "ucapan"], seen = {};
+  const ids = ["rsvp", "loc", "hadiah"], seen = {};
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => seen[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0);
     const best = ids.reduce((a, b) => (seen[b] || 0) > (seen[a] || 0) ? b : a);
@@ -1448,6 +1575,41 @@ function layoutStops() {
 }
 addEventListener("resize", layoutStops);
 if (document.fonts) document.fonts.ready.then(layoutStops);
+
+/* keep the bismillah line on one line by shrinking it to fit */
+function fitOneLine() {
+  document.querySelectorAll(".couple span:not(.amp)").forEach(el => {
+    let fs = 34; el.style.fontSize = fs + "px";
+    while (el.scrollWidth > el.parentElement.clientWidth && fs > 22) { fs -= 1; el.style.fontSize = fs + "px"; }
+  });
+  document.querySelectorAll(".oneline, .honor").forEach(el => {
+    let fs = el.classList.contains("honor") ? 12.5 : 16; el.style.fontSize = fs + "px";
+    while (el.scrollWidth > el.clientWidth + 1 && fs > 9) { fs -= 0.5; el.style.fontSize = fs + "px"; }
+  });
+}
+addEventListener("resize", fitOneLine);
+if (document.fonts) document.fonts.ready.then(fitOneLine);
+
+/* ---------- Hadiah (gift) ---------- */
+function renderGift() {
+  const g = CONFIG.gift || {}, hasBank = !!(g.bank || g.accountNo);
+  $("giftBank").classList.toggle("hidden", !hasBank);
+  $("giftBankName").textContent = g.bank || ""; $("giftAccNo").textContent = g.accountNo || ""; $("giftAccName").textContent = g.accountName || "";
+  $("giftCopy").classList.toggle("hidden", !g.accountNo);
+  if (g.qr && !$("giftQr").dataset.tried) {
+    $("giftQr").dataset.tried = 1;
+    $("giftQr").onload = () => { $("giftQr").classList.remove("hidden"); $("giftSoon").classList.add("hidden"); };
+    $("giftQr").onerror = () => { if (!hasBank) $("giftSoon").classList.remove("hidden"); };
+    $("giftQr").src = g.qr;
+  }
+  if (!g.qr && !hasBank) $("giftSoon").classList.remove("hidden");
+}
+$("giftCopy").addEventListener("click", () => {
+  const n = (CONFIG.gift.accountNo || "").replace(/\s/g, "");
+  (navigator.clipboard ? navigator.clipboard.writeText(n) : Promise.reject()).then(() => {
+    $("giftCopy").textContent = t("copied"); setTimeout(() => $("giftCopy").textContent = t("copy"), 1500);
+  }).catch(() => {});
+});
 
 /* ---------- Hubungi (contacts) ---------- */
 function renderContacts() {
@@ -1496,7 +1658,7 @@ function renderGallery() {
         img.alt = `${CONFIG.bride} & ${CONFIG.groom} ${i + 1}`; f.appendChild(img);
       } else {
         f.style.background = tints[i % 3];
-        f.innerHTML = `<div class="ph"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orchid" width="100" height="100" style="color:${flowers[i % 3]}"/></svg><span></span></div>`;
+        f.innerHTML = `<div class="ph"><img src="img/orchids/${["single_white1", "single_lilac2", "single_white6"][i % 3]}.png" alt=""><span></span></div>`;
       }
       g.appendChild(f);
       const d = document.createElement("button"); d.type = "button"; d.setAttribute("aria-label", `${i + 1}`);
