@@ -385,7 +385,7 @@
   /* invitation: a paper card framed in lace */
   .card.invite{margin-top:80px;padding:58px 4px 30px;border-radius:0;border:20px solid transparent;border-image:url(img/laceframe.png) 34 round;
     background:#FBF8F2 url(img/papercard.jpg) padding-box;box-shadow:none;filter:drop-shadow(0 10px 16px rgba(60,40,60,.16))}
-  .card.invite .flora.top{left:50%;top:-92px;width:270px;transform:translateX(-50%)}
+  .card.invite .flora.top{left:50%;top:-100px;width:300px;transform:translateX(-50%)}
   .invite .salam{font:600 17px/1.4 "Cormorant Garamond",serif;color:var(--ink)}
   .lead.oneline{white-space:nowrap;overflow:hidden;font:italic 500 16px/1.4 "Cormorant Garamond",serif;max-width:none;color:#6A5A70}
   .parents{font:500 22px/1.3 "Cormorant Garamond",serif}
@@ -398,10 +398,10 @@
   .details h2{margin:26px 0 6px}
   .details > h2:first-of-type{margin-top:0}
   .details .sc{font:500 17px/1.6 "Cormorant SC",serif;letter-spacing:.14em;color:#6A5A70;margin:0}
-  .details .flora.side{right:-34px;top:-92px;width:150px;transform:rotate(12deg)}
+  .details .flora.side{right:-40px;top:-80px;width:150px;transform:none}
   .details .loc{padding-top:6px}
   .seal{background:radial-gradient(circle at 35% 30%,#fff,#F3ECE4 75%)}
-  .seal img{width:92px;height:auto}
+  .seal img{width:96px;height:auto}
   /* RSVP */
   #rsvp{margin-top:48px}
   .stepper button:disabled{opacity:.35;cursor:default}
@@ -437,7 +437,7 @@
   /* footer */
   footer{margin:110px -30px 0;padding-top:110px}
   footer .lace-sep{position:absolute;left:0;right:0;top:-29px;margin:0}
-  footer .flora.foot{left:50%;top:-110px;width:270px;transform:translateX(-50%);z-index:4}
+  footer .flora.foot{left:50%;top:-112px;width:300px;transform:translateX(-50%);z-index:4}
 </style>
 </head>
 <body>
@@ -786,7 +786,7 @@
   <div class="lace-sep"></div>
 
   <section class="card invite">
-    <img class="flora top" src="img/orchids/cluster.png" alt="">
+    <img class="flora top" src="img/orchids/lily_pair.png" alt="">
     <p class="salam" data-t="salam"></p>
     <p class="lead oneline" data-t="bismillahText"></p>
     <div class="parents"><span id="father"></span><span class="amp">&amp;</span><span id="mother"></span></div>
@@ -799,7 +799,7 @@
   </section>
 
   <section class="details" id="details">
-    <img class="flora side" src="img/orchids/cluster2.png" alt="">
+    <img class="flora side" src="img/orchids/lily_b.png" alt="">
     <h2 data-t="dateTitle"></h2>
     <p class="sc"><span data-t="tDay"></span><br><span data-t="tDate"></span></p>
     <h2 data-t="timeTitle"></h2>
@@ -807,7 +807,7 @@
     <div class="loc" id="loc">
       <h2 data-t="locTitle"></h2>
     <div class="seal-wrap" id="sealed">
-      <div class="seal"><img src="img/orchids/single_f4.png" alt=""></div>
+      <div class="seal"><img src="img/orchids/lily_seal.png" alt=""></div>
       <div class="area"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><span id="areaText"></span></div>
       <span class="seal-blur" aria-hidden="true">Dewan ••••• •••••••</span>
       <p class="seal-text" id="sealText"></p>
@@ -936,7 +936,7 @@
 
   <footer>
     <div class="lace-sep up"></div>
-    <img class="flora foot" src="img/orchids/cluster.png" alt="">
+    <img class="flora foot" src="img/orchids/lily_pair.png" alt="">
     <div class="doa" data-t="doa"></div>
     <div id="footNames"></div>
   </footer>
@@ -1656,7 +1656,7 @@ function renderGallery() {
         img.alt = `${CONFIG.bride} & ${CONFIG.groom} ${i + 1}`; f.appendChild(img);
       } else {
         f.style.background = tints[i % 3];
-        f.innerHTML = `<div class="ph"><img src="img/orchids/${["single_f2", "single_f4", "single_f6"][i % 3]}.png" alt=""><span></span></div>`;
+        f.innerHTML = `<div class="ph"><img src="img/orchids/${["lily_a", "lily_b", "lily_a"][i % 3]}.png" alt=""><span></span></div>`;
       }
       g.appendChild(f);
       const d = document.createElement("button"); d.type = "button"; d.setAttribute("aria-label", `${i + 1}`);
