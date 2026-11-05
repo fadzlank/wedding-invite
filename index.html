@@ -412,6 +412,9 @@
   .itin .lace-sep{margin:0}
   .itin .lace-sep.up{margin-bottom:-1px}
   .itin-paint .torn{display:none}
+  /* programme inside a white box, like the RSVP card */
+  .card.itin{margin:48px 0 0;padding:28px 18px 18px}
+  .card.itin .itin-paint{height:430px;border-radius:4px;overflow:hidden}
   /* dress code */
   .dress{text-align:center;margin-top:56px}
   .dress .sc{font:500 17px/1.5 "Cormorant SC",serif;letter-spacing:.14em;color:#6A5A70;margin:0 0 16px}
@@ -871,14 +874,12 @@
     </form>
   </section>
 
-  <section class="itin" id="itin">
+  <section class="card itin" id="itin">
     <h2 data-t="scheduleTitle"></h2>
-    <div class="lace-sep up"></div>
     <div class="itin-paint" id="itinPaint">
       <svg class="itin-line" id="itinLine" aria-hidden="true"><path id="wind" d="M-20 4 C90 10 140 50 130 100 C120 160 280 170 270 250 C262 320 120 340 150 464" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>
       <ul class="stops" id="schedule"></ul>
     </div>
-    <div class="lace-sep"></div>
   </section>
 
   <section class="dress" id="dress">
