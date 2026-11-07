@@ -439,6 +439,9 @@
   .copy{margin-left:8px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font:600 12px/1.4 "Mulish",sans-serif;color:var(--rose);vertical-align:3px}
   #ucapan{margin-top:48px}
   .lead:empty{display:none}
+  /* the linking lines of the invitation in the same italic serif as the bismillah line */
+  .invite .lead:not(.oneline){font:italic 500 18px/1.45 "Cormorant Garamond",serif;color:#6A5A70;margin:2px auto 8px}
+  .dress .sc{white-space:nowrap}
   .dress-eg{font:italic 500 16px/1.4 "Cormorant Garamond",serif;color:var(--muted);margin:-8px auto 18px;max-width:300px}
   .gift-btn{display:inline-flex;align-items:center;gap:10px;margin-top:4px;min-height:52px;padding:0 26px;border-radius:999px;border:0;
     background:var(--rose);color:#fff;font:700 16px/1 "Mulish",sans-serif;box-shadow:0 8px 18px -10px rgba(80,40,90,.6);transition:transform .15s}
@@ -1075,7 +1078,7 @@ const T = {
   ms: {
     walimah: "Walimatul Urus",
     dateLong: "Ahad, 31 Januari 2027",
-    salam: "Assalamualaikum dan salam sejahtera",
+    salam: "Assalamualaikum dan Salam Sejahtera",
     bismillahText: "",
     preParents: "Dengan penuh kesyukuran, kami",
     inviteLead: "mengundang kehadiran",
@@ -1130,7 +1133,7 @@ const T = {
     coverFrom: "Sepucuk warkah daripada", tapOpen: "Sentuh sampul untuk membuka",
     dateTitle: "Tarikh", timeTitle: "Masa", tDay: "Ahad", tDate: "31 Januari 2027",
     scheduleTitle: "Atur Cara",
-    dressTitle: "Kod Pakaian", dressCode: "Pakaian Formal atau Tradisional", dressExamples: "Baju Melayu, baju kurung, baju kemeja, baju batik dan seumpamanya", dressDo: "Digalakkan", dressDoText: "Sebarang warna lain",
+    dressTitle: "Kod Pakaian", dressCode: "Formal atau Tradisional", dressExamples: "Baju Melayu, baju kurung, baju kemeja, baju batik dan seumpamanya", dressDo: "Digalakkan", dressDoText: "Sebarang warna lain",
     dressDont: "Mohon Elakkan", dressDontText: "Putih, biru muda & kuning muda",
     giftTitle: "Hadiah", giftText: "Kehadiran dan doa anda sudah cukup bermakna. Jika ingin memberi hadiah, boleh melalui:",
     giftSoon: "Butiran akan dikongsi tidak lama lagi.", giftBtn: "Lihat Kod QR", saveQr: "Simpan Kod QR", qrHow: "Simpan gambar ini, kemudian muat naik di aplikasi bank anda (DuitNow QR).", copy: "Salin", copied: "Disalin",
@@ -1197,7 +1200,7 @@ const T = {
     coverFrom: "A letter from", tapOpen: "Tap the envelope to open",
     dateTitle: "Date", timeTitle: "Time", tDay: "Sunday", tDate: "31 January 2027",
     scheduleTitle: "Programme",
-    dressTitle: "Dress Code", dressCode: "Formal or Traditional Attire", dressExamples: "Baju Melayu, baju kurung, shirts, batik and the like", dressDo: "Do", dressDoText: "Any other colour",
+    dressTitle: "Dress Code", dressCode: "Formal or Traditional", dressExamples: "Baju Melayu, baju kurung, shirts, batik and the like", dressDo: "Do", dressDoText: "Any other colour",
     dressDont: "Please Avoid", dressDontText: "White, baby blue & baby yellow",
     giftTitle: "Gifts", giftText: "Your presence and prayers mean the most to us. Should you wish to give a gift:",
     giftSoon: "Details will be shared soon.", giftBtn: "View QR Code", saveQr: "Save QR Code", qrHow: "Save this image, then upload it in your banking app (DuitNow QR).", copy: "Copy", copied: "Copied",
