@@ -435,6 +435,10 @@
   .dress-col span{display:block;font:italic 500 17px/1.3 "Cormorant Garamond",serif;color:var(--muted)}
   /* countdown sits right above the gallery */
   .countdown{margin-top:56px}
+  /* sections without a paper box */
+  section.plain{margin-top:56px;background:none;border:0;box-shadow:none;padding:0}
+  .itin.plain{margin:56px 0 0}
+  .plain .gallery{margin:0 -4px;padding:0 4px 4px}
   .gallery .ph img{width:62%;height:auto;display:block;margin:0 auto 10px}
   /* gifts */
   #hadiah{text-align:center;margin-top:48px}
@@ -899,7 +903,7 @@
     </form>
   </section>
 
-  <section class="card itin" id="itin">
+  <section class="itin plain" id="itin">
     <h2 data-t="scheduleTitle"></h2>
     <ul class="prog" id="schedule"></ul>
   </section>
@@ -918,17 +922,7 @@
     </div>
   </section>
 
-  <section class="countdown">
-    <h2 data-t="countTitle"></h2>
-    <div class="count" id="count">
-      <div><b id="cd-d">0</b><span data-t="days"></span></div>
-      <div><b id="cd-h">0</b><span data-t="hours"></span></div>
-      <div><b id="cd-m">0</b><span data-t="mins"></span></div>
-      <div><b id="cd-s">0</b><span data-t="secs"></span></div>
-    </div>
-  </section>
-
-  <section class="card" id="gallerySec">
+  <section class="plain" id="gallerySec">
     <h2 data-t="galleryTitle"></h2>
     <div class="gallery" id="gallery" tabindex="0" aria-label="Gallery"></div>
     <div class="dots" id="dots"></div>
@@ -941,6 +935,16 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4.5" rx="1"/><path d="M4.5 12.5V20a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-7.5M12 8v13M12 8c-1.6-3.6-5.5-4.6-6.2-2.4C5.2 7.6 9 8 12 8zM12 8c1.6-3.6 5.5-4.6 6.2-2.4.6 2-3.2 2.4-6.2 2.4z"/></svg>
       <span data-t="giftBtn"></span>
     </button>
+  </section>
+
+  <section class="countdown">
+    <h2 data-t="countTitle"></h2>
+    <div class="count" id="count">
+      <div><b id="cd-d">0</b><span data-t="days"></span></div>
+      <div><b id="cd-h">0</b><span data-t="hours"></span></div>
+      <div><b id="cd-m">0</b><span data-t="mins"></span></div>
+      <div><b id="cd-s">0</b><span data-t="secs"></span></div>
+    </div>
   </section>
 
   <section class="card" id="ucapan">
