@@ -438,6 +438,15 @@
   .bank-holder{font:500 italic 17px/1.3 "Cormorant Garamond",serif;color:var(--muted)}
   .copy{margin-left:8px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font:600 12px/1.4 "Mulish",sans-serif;color:var(--rose);vertical-align:3px}
   #ucapan{margin-top:48px}
+  .lead:empty{display:none}
+  .dress-eg{font:italic 500 16px/1.4 "Cormorant Garamond",serif;color:var(--muted);margin:-8px auto 18px;max-width:300px}
+  .gift-btn{display:inline-flex;align-items:center;gap:10px;margin-top:4px;min-height:52px;padding:0 26px;border-radius:999px;border:0;
+    background:var(--rose);color:#fff;font:700 16px/1 "Mulish",sans-serif;box-shadow:0 8px 18px -10px rgba(80,40,90,.6);transition:transform .15s}
+  .gift-btn:active{transform:scale(.97)}
+  .gift-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .gift-sheet{text-align:center}
+  .gift-sheet .qr{margin:6px auto 14px}
+  .gift-sheet .hint{margin:8px 0 2px}
   /* footer */
   footer{margin:40px -30px 0;padding-top:80px}
   /* no empty space for messages that aren't showing */
@@ -797,6 +806,7 @@
     <img class="flora top" src="img/orchids/lily_pair.png" alt="">
     <p class="salam" data-t="salam"></p>
     <p class="lead oneline" data-t="bismillahText"></p>
+    <p class="lead" data-t="preParents"></p>
     <div class="parents"><span id="father"></span><span class="amp">&amp;</span><span id="mother"></span></div>
     <p class="lead" data-t="inviteLead"></p>
     <p class="honor" data-t="honorifics"></p>
@@ -889,6 +899,7 @@
   <section class="dress" id="dress">
     <h2 data-t="dressTitle"></h2>
     <p class="sc" data-t="dressCode"></p>
+    <p class="dress-eg" data-t="dressExamples"></p>
     <div class="dress-grid">
       <div class="dress-col"><b data-t="dressDo"></b>
         <div class="dots"><i style="background:#B9A6D3"></i><i style="background:#E7A3BA"></i><i style="background:#9FB590"></i><i style="background:#C9A15A"></i><i style="background:#7E5A86"></i></div>
@@ -918,13 +929,10 @@
   <section class="card" id="hadiah">
     <h2 data-t="giftTitle"></h2>
     <p class="lead" data-t="giftText"></p>
-    <img class="qr hidden" id="giftQr" alt="DuitNow QR">
-    <div class="bank hidden" id="giftBank">
-      <div class="bank-name" id="giftBankName"></div>
-      <div class="bank-acc"><span id="giftAccNo"></span> <button type="button" class="copy" id="giftCopy" data-t="copy"></button></div>
-      <div class="bank-holder" id="giftAccName"></div>
-    </div>
-    <p class="hint hidden" id="giftSoon" data-t="giftSoon"></p>
+    <button type="button" class="gift-btn" id="giftOpen" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4.5" rx="1"/><path d="M4.5 12.5V20a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-7.5M12 8v13M12 8c-1.6-3.6-5.5-4.6-6.2-2.4C5.2 7.6 9 8 12 8zM12 8c1.6-3.6 5.5-4.6 6.2-2.4.6 2-3.2 2.4-6.2 2.4z"/></svg>
+      <span data-t="giftBtn"></span>
+    </button>
   </section>
 
   <section class="card" id="ucapan">
@@ -963,7 +971,7 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
     <span data-t="navLoc"></span>
   </button>
-  <button type="button" data-go="hadiah">
+  <button type="button" id="dockGift" aria-haspopup="dialog">
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4.5" rx="1"/><path d="M4.5 12.5V20a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-7.5M12 8v13M12 8c-1.6-3.6-5.5-4.6-6.2-2.4C5.2 7.6 9 8 12 8zM12 8c1.6-3.6 5.5-4.6 6.2-2.4.6 2-3.2 2.4-6.2 2.4z"/></svg>
     <span data-t="navGift"></span>
   </button>
@@ -973,6 +981,22 @@
   <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
 </button>
 
+<div class="sheet-bg hidden" id="giftSheet" role="dialog" aria-modal="true" aria-labelledby="giftSheetTitle">
+  <div class="sheet gift-sheet">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <h3 id="giftSheetTitle" data-t="giftTitle"></h3>
+    <img class="qr hidden" id="giftQr" alt="DuitNow QR">
+    <a class="btn primary full hidden" id="giftSave" href="img/qr.png" download="QR-Aydina-Fadzlan.png" data-t="saveQr"></a>
+    <p class="hint hidden" id="giftHow" data-t="qrHow"></p>
+    <div class="bank hidden" id="giftBank">
+      <div class="bank-name" id="giftBankName"></div>
+      <div class="bank-acc"><span id="giftAccNo"></span> <button type="button" class="copy" id="giftCopy" data-t="copy"></button></div>
+      <div class="bank-holder" id="giftAccName"></div>
+    </div>
+    <p class="hint hidden" id="giftSoon" data-t="giftSoon"></p>
+    <button type="button" class="btn ghost full" id="giftClose" data-t="close"></button>
+  </div>
+</div>
 <div class="sheet-bg hidden" id="contactSheet" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
   <div class="sheet">
     <div class="sheet-grip" aria-hidden="true"></div>
@@ -1051,23 +1075,24 @@ const T = {
   ms: {
     walimah: "Walimatul Urus",
     dateLong: "Ahad, 31 Januari 2027",
-    salam: "Assalamualaikum dan Salam Sejahtera",
-    bismillahText: "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang",
-    inviteLead: "Dengan penuh rasa kesyukuran, kami ingin menjemput",
-    honorifics: "Dato' | Datin | Tuan | Puan | Encik | Cik",
-    inviteTo: "ke majlis perkahwinan anakanda kami",
+    salam: "Assalamualaikum dan salam sejahtera",
+    bismillahText: "",
+    preParents: "Dengan penuh kesyukuran, kami",
+    inviteLead: "mengundang kehadiran",
+    honorifics: "Tan Sri | Puan Sri | Dato' | Datin | Tuan | Puan | Encik | Cik",
+    inviteTo: "hadir ke majlis perkahwinan",
     dear: "Buat",
     inviteText: "Dengan penuh kesyukuran ke hadrat Ilahi, kami dengan segala hormatnya menjemput anda sekeluarga ke majlis perkahwinan kami.",
-    countTitle: "Menghitung hari",
+    countTitle: "Menghitung Hari",
     days: "hari", hours: "jam", mins: "minit", secs: "saat",
     today: "Hari ini hari bahagia kami!",
-    scheduleTitle: "Atur cara",
+    scheduleTitle: "Atur Cara",
     am: "pagi", pm: "petang",
     locTitle: "Lokasi",
     sealPending: "Lokasi tepat akan dikongsi sebaik sahaja anda mengesahkan kehadiran di bawah.",
     sealDeclined: "Lokasi hanya dikongsi dengan tetamu yang hadir. Tukar jawapan anda jika rancangan berubah.",
     calendar: "Simpan ke kalendar",
-    rsvpTitle: "Pengesahan kehadiran",
+    rsvpTitle: "Pengesahan Kehadiran",
     attendQ: "Adakah anda dapat hadir?",
     yes: "Ya, saya akan hadir",
     no: "Maaf, tidak dapat hadir",
@@ -1105,13 +1130,13 @@ const T = {
     coverFrom: "Sepucuk warkah daripada", tapOpen: "Sentuh sampul untuk membuka",
     dateTitle: "Tarikh", timeTitle: "Masa", tDay: "Ahad", tDate: "31 Januari 2027",
     scheduleTitle: "Atur Cara",
-    dressTitle: "Kod Pakaian", dressCode: "Pakaian tradisional", dressDo: "Digalakkan", dressDoText: "Sebarang warna lain",
-    dressDont: "Mohon elakkan", dressDontText: "Putih, biru muda & kuning muda",
+    dressTitle: "Kod Pakaian", dressCode: "Pakaian Formal atau Tradisional", dressExamples: "Baju Melayu, baju kurung, baju kemeja, baju batik dan seumpamanya", dressDo: "Digalakkan", dressDoText: "Sebarang warna lain",
+    dressDont: "Mohon Elakkan", dressDontText: "Putih, biru muda & kuning muda",
     giftTitle: "Hadiah", giftText: "Kehadiran dan doa anda sudah cukup bermakna. Jika ingin memberi hadiah, boleh melalui:",
-    giftSoon: "Butiran akan dikongsi tidak lama lagi.", copy: "Salin", copied: "Disalin",
+    giftSoon: "Butiran akan dikongsi tidak lama lagi.", giftBtn: "Lihat Kod QR", saveQr: "Simpan Kod QR", qrHow: "Simpan gambar ini, kemudian muat naik di aplikasi bank anda (DuitNow QR).", copy: "Salin", copied: "Disalin",
     maxAdults: (n) => `Maksimum ${n} dewasa untuk jemputan ini`, maxKids: (n) => `Maksimum ${n} kanak-kanak`,
     navGift: "Hadiah",
-    navContact: "Hubungi", contactTitle: "Hubungi kami", close: "Tutup", call: "Telefon", navLoc: "Lokasi", navCal: "Kalendar", navRsvp: "RSVP", navWish: "Ucapan",
+    navContact: "Hubungi", contactTitle: "Hubungi Kami", close: "Tutup", call: "Telefon", navLoc: "Lokasi", navCal: "Kalendar", navRsvp: "RSVP", navWish: "Ucapan",
     locale: "ms-MY",
   },
   en: {
@@ -1119,12 +1144,13 @@ const T = {
     dateLong: "Sunday, 31 January 2027",
     salam: "Assalamualaikum & Warm Greetings",
     bismillahText: "In the name of Allah, the Most Gracious, the Most Merciful",
+    preParents: "",
     inviteLead: "With gratitude to Allah, we cordially invite",
     honorifics: "",
     inviteTo: "to the wedding reception of our beloved daughter",
     dear: "Dear",
     inviteText: "With gratitude to Allah, we warmly invite you and your family to celebrate our wedding with us.",
-    countTitle: "Counting the days",
+    countTitle: "Counting the Days",
     days: "days", hours: "hours", mins: "mins", secs: "secs",
     today: "Today is our wedding day!",
     scheduleTitle: "Programme",
@@ -1171,13 +1197,13 @@ const T = {
     coverFrom: "A letter from", tapOpen: "Tap the envelope to open",
     dateTitle: "Date", timeTitle: "Time", tDay: "Sunday", tDate: "31 January 2027",
     scheduleTitle: "Programme",
-    dressTitle: "Dress Code", dressCode: "Traditional attire", dressDo: "Do", dressDoText: "Any other colour",
-    dressDont: "Please avoid", dressDontText: "White, baby blue & baby yellow",
+    dressTitle: "Dress Code", dressCode: "Formal or Traditional Attire", dressExamples: "Baju Melayu, baju kurung, shirts, batik and the like", dressDo: "Do", dressDoText: "Any other colour",
+    dressDont: "Please Avoid", dressDontText: "White, baby blue & baby yellow",
     giftTitle: "Gifts", giftText: "Your presence and prayers mean the most to us. Should you wish to give a gift:",
-    giftSoon: "Details will be shared soon.", copy: "Copy", copied: "Copied",
+    giftSoon: "Details will be shared soon.", giftBtn: "View QR Code", saveQr: "Save QR Code", qrHow: "Save this image, then upload it in your banking app (DuitNow QR).", copy: "Copy", copied: "Copied",
     maxAdults: (n) => `Up to ${n} adult${n > 1 ? "s" : ""} for this invitation`, maxKids: (n) => `Up to ${n} child${n > 1 ? "ren" : ""}`,
     navGift: "Gifts",
-    navContact: "Contact", contactTitle: "Contact us", close: "Close", call: "Call", navLoc: "Location", navCal: "Calendar", navRsvp: "RSVP", navWish: "Wishes",
+    navContact: "Contact", contactTitle: "Contact Us", close: "Close", call: "Call", navLoc: "Location", navCal: "Calendar", navRsvp: "RSVP", navWish: "Wishes",
     locale: "en-GB",
   },
 };
@@ -1545,7 +1571,7 @@ function startSparkles() {
 
 /* highlight the bar item for the section on screen */
 function setupActiveNav() {
-  const ids = ["rsvp", "loc", "hadiah"], seen = {};
+  const ids = ["rsvp", "loc"], seen = {};
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => seen[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0);
     const best = ids.reduce((a, b) => (seen[b] || 0) > (seen[a] || 0) ? b : a);
@@ -1600,7 +1626,7 @@ function renderGift() {
   $("giftCopy").classList.toggle("hidden", !g.accountNo);
   if (g.qr && !$("giftQr").dataset.tried) {
     $("giftQr").dataset.tried = 1;
-    $("giftQr").onload = () => { $("giftQr").classList.remove("hidden"); $("giftSoon").classList.add("hidden"); };
+    $("giftQr").onload = () => { ["giftQr", "giftSave", "giftHow"].forEach(id => $(id).classList.remove("hidden")); $("giftSoon").classList.add("hidden"); };
     $("giftQr").onerror = () => { if (!hasBank) $("giftSoon").classList.remove("hidden"); };
     $("giftQr").src = g.qr;
   }
@@ -1633,6 +1659,13 @@ function renderContacts() {
     li.append(who, wa, call); ul.appendChild(li);
   });
 }
+function openGift() { renderGift(); $("giftSheet").classList.remove("hidden"); $("giftClose").focus(); }
+function closeGift() { $("giftSheet").classList.add("hidden"); }
+$("giftOpen").addEventListener("click", openGift);
+$("dockGift").addEventListener("click", openGift);
+$("giftClose").addEventListener("click", closeGift);
+$("giftSheet").addEventListener("click", (e) => { if (e.target === $("giftSheet")) closeGift(); });
+addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("giftSheet").classList.contains("hidden")) closeGift(); });
 function openContacts() { renderContacts(); $("contactSheet").classList.remove("hidden"); $("contactClose").focus(); }
 function closeContacts() { $("contactSheet").classList.add("hidden"); $("contactBtn").focus(); }
 $("contactBtn").addEventListener("click", openContacts);
