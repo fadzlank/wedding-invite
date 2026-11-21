@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rombongan Pengantin Lelaki · Fadzlan & Aydina</title>
+<meta name="description" content="Maklumat untuk keluarga: atur cara, penginapan dan pengesahan kehadiran.">
+<meta name="theme-color" content="#CFC6CC">
+<style>
+  @font-face{font-family:"Pinyon Script";src:url(/fonts/pinyon.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Cormorant Garamond";font-weight:500;src:url(/fonts/corm-500-normal.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Cormorant Garamond";font-weight:600;src:url(/fonts/corm-600-normal.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;src:url(/fonts/corm-500-italic.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Cormorant SC";font-weight:500;src:url(/fonts/cormsc-500.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Cormorant SC";font-weight:600;src:url(/fonts/cormsc-600.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Mulish";font-weight:400;src:url(/fonts/mulish-400.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Mulish";font-weight:600;src:url(/fonts/mulish-600.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:"Mulish";font-weight:700;src:url(/fonts/mulish-700.woff2) format("woff2");font-display:swap}
+
+  :root{--ink:#3F3A4E;--rose:#8A3F72;--muted:#5F5970;--line:#E3D7E0;--gold:#B99A6A;--wash:#F6E9F1;--green:#B9D3B0;--green-ink:#4E7046}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:#CFC6CC url(/img/lilacpond.jpg) center/cover fixed;color:var(--ink);font:400 18px/1.6 "Mulish",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .page{max-width:480px;margin:0 auto;padding:0 16px 48px;background:#F5EFE7 url(/img/paper.jpg);min-height:100vh;
+    box-shadow:0 0 40px rgba(60,40,60,.25);position:relative}
+  .page::before,.page::after{content:"";position:absolute;top:0;bottom:0;width:24px;background:url(/img/lacev.png) 0 0/24px auto repeat-y;pointer-events:none}
+  .page::before{left:-2px}
+  .page::after{right:-2px;transform:scaleX(-1)}
+
+  /* hero */
+  .hero{margin:0 -16px;padding:46px 30px 34px;text-align:center;position:relative;
+    background:url(/img/lilacpond.jpg) center 30%/cover;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(75% 60% at 50% 55%,rgba(250,247,244,.94),rgba(250,247,244,.8) 60%,rgba(250,247,244,.35))}
+  .hero>*{position:relative}
+  .kicker{font:600 13px/1.4 "Mulish";letter-spacing:.16em;text-transform:uppercase;color:var(--green-ink)}
+  .fam{font:400 54px/1.05 "Pinyon Script",cursive;color:var(--rose);margin:10px 0 6px}
+  .sub{font:italic 500 20px/1.35 "Cormorant Garamond",serif;color:#5A4A62;margin:0}
+  .date{font:500 19px/1.4 "Cormorant SC",serif;letter-spacing:.08em;color:var(--ink);margin-top:14px}
+
+  /* sections */
+  section{margin:30px 6px 0}
+  .card{background:#FBF8F2 url(/img/papercard.jpg);border-radius:18px;padding:22px 20px;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 8px 22px rgba(80,60,70,.10)}
+  h2{font:400 40px/1.1 "Pinyon Script",cursive;color:var(--rose);text-align:center;margin:0 0 4px}
+  .orn{display:block;width:150px;height:14px;margin:2px auto 16px;opacity:.85}
+  p{margin:0 0 12px}
+  .muted{color:var(--muted)}
+  .center{text-align:center}
+
+  .venue-sketch{display:block;width:118px;height:118px;border-radius:50%;object-fit:cover;margin:0 auto 12px;box-shadow:0 0 0 5px #fff,0 0 0 8px var(--gold),0 6px 16px rgba(0,0,0,.15)}
+  .venue-name{font:600 28px/1.15 "Cormorant Garamond",serif;color:var(--rose);text-align:center}
+  .venue-area{text-align:center;color:var(--muted);margin-bottom:16px}
+  .btns{display:flex;gap:10px}
+  .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:14px;border:1.5px solid var(--rose);color:var(--rose);background:#fff;font-weight:700;font-size:17px;text-decoration:none}
+  .btn.solid{background:var(--rose);color:#fff}
+  .btn svg{width:20px;height:20px}
+
+  .prog{list-style:none;margin:0;padding:0;position:relative}
+  .prog::before{content:"";position:absolute;left:92px;top:12px;bottom:12px;width:1px;background:rgba(185,154,106,.7)}
+  .prog li{display:grid;grid-template-columns:92px 1fr;align-items:baseline;padding:10px 0;position:relative}
+  .prog li::before{content:"";position:absolute;left:88px;top:50%;width:8px;height:8px;margin-top:-4px;background:var(--gold);transform:rotate(45deg)}
+  .prog time{text-align:right;padding-right:20px;font:600 18px/1.3 "Cormorant SC",serif;color:var(--rose);white-space:nowrap}
+  .prog span{padding-left:20px;font-size:17px;line-height:1.35}
+  .prog span small{display:block;color:var(--muted);font-size:14px}
+  .prog li.key span{font-weight:700}
+
+  .swatches{display:flex;justify-content:center;gap:12px;margin:6px 0 14px}
+  .swatches i{width:46px;height:46px;border-radius:50%;box-shadow:0 0 0 3px #fff,0 2px 8px rgba(0,0,0,.15)}
+  .dress-name{font:600 26px/1.2 "Cormorant Garamond",serif;color:var(--green-ink);text-align:center}
+
+  .soon{border:1.5px dashed var(--gold);border-radius:14px;padding:14px;text-align:center;background:rgba(255,255,255,.55)}
+  .soon b{display:block;font-size:17px}
+
+  /* form */
+  label{display:block;font-weight:700;margin:14px 0 6px}
+  input[type=text],textarea{width:100%;font:inherit;font-size:18px;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+  textarea{min-height:76px;resize:vertical}
+  .choice{display:flex;gap:10px}
+  .choice button{flex:1;min-height:54px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font:700 17px "Mulish";color:var(--ink)}
+  .choice button[aria-pressed=true]{border-color:var(--rose);background:var(--wash);color:var(--rose)}
+  .stepper{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:6px 8px}
+  .stepper span{font-weight:700}
+  .stepper .ctl{display:flex;align-items:center;gap:14px}
+  .stepper button{width:46px;height:46px;border-radius:50%;border:0;background:var(--wash);color:var(--rose);font:700 24px/1 "Mulish"}
+  .stepper output{min-width:26px;text-align:center;font:700 22px "Mulish"}
+  .submit{width:100%;margin-top:20px;min-height:56px;border:0;border-radius:14px;background:var(--rose);color:#fff;font:700 18px "Mulish"}
+  .submit:disabled{opacity:.6}
+  .msg{margin-top:12px;text-align:center;font-weight:700}
+  .msg.ok{color:var(--green-ink)} .msg.err{color:#A33}
+  .hidden{display:none!important}
+  .done{text-align:center}
+  .done .big{font:400 40px/1.1 "Pinyon Script",cursive;color:var(--rose)}
+  .link{background:none;border:0;color:var(--rose);text-decoration:underline;font:600 16px "Mulish";padding:8px}
+
+  .count{display:flex;justify-content:center;align-items:baseline;gap:6px;margin:0 0 6px}
+  .count b{font:600 40px/1 "Cormorant Garamond",serif;color:var(--rose)}
+  .bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden;margin:6px 0 16px}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,#C99BB7,var(--rose));border-radius:99px;transition:width .4s}
+  .who{list-style:none;margin:0;padding:0}
+  .who li{display:flex;justify-content:space-between;gap:10px;padding:9px 2px;border-bottom:1px dashed var(--line)}
+  .who li:last-child{border-bottom:0}
+  .who .n{font-weight:700}
+  .who .p{color:var(--muted);font-size:15px;white-space:nowrap}
+  .who li.no .n{color:var(--muted);font-weight:400;text-decoration:line-through}
+
+  .contacts{list-style:none;margin:0;padding:0}
+  .contacts li{display:flex;align-items:center;gap:12px;padding:12px 2px;border-bottom:1px dashed var(--line)}
+  .contacts li:last-child{border-bottom:0}
+  .contacts .w{flex:1}
+  .contacts .w b{display:block}
+  .contacts .w span{font-size:14px;color:var(--muted)}
+  .contacts a{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:none}
+  .contacts .wa{background:#E7F6EC;color:#1E8E4E}
+  .contacts .call{background:var(--wash);color:var(--rose)}
+  .contacts a svg{width:22px;height:22px}
+  footer{text-align:center;margin-top:34px;font:400 30px/1 "Pinyon Script",cursive;color:var(--rose)}
+  footer small{display:block;font:500 15px "Cormorant SC",serif;letter-spacing:.1em;color:var(--muted);margin-top:8px}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <div class="kicker">Rombongan Pengantin Lelaki</div>
+    <div class="fam" id="famName">Keluarga</div>
+    <p class="sub">Majlis Akad Nikah &amp; Persandingan<br>Fadzlan &amp; Aydina</p>
+    <div class="date">Ahad · 31 Januari 2027</div>
+  </header>
+
+  <section>
+    <p class="center" id="intro"></p>
+  </section>
+
+  <section class="card">
+    <h2>Lokasi</h2>
+    <svg class="orn" viewBox="0 0 150 14"><path d="M2 7h56M92 7h56" stroke="#B99A6A" stroke-width="1"/><path d="M75 1l6 6-6 6-6-6z" fill="#B99A6A"/><circle cx="62" cy="7" r="2" fill="#B99A6A"/><circle cx="88" cy="7" r="2" fill="#B99A6A"/></svg>
+    <img class="venue-sketch" src="/img/venue_sketch.jpg" alt="Lakaran tempat majlis">
+    <div class="venue-name" id="venueName"></div>
+    <div class="venue-area" id="venueArea"></div>
+    <div class="btns">
+      <a class="btn solid" id="waze" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Waze</a>
+      <a class="btn" id="gmaps" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Google Maps</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Atur Cara</h2>
+    <svg class="orn" viewBox="0 0 150 14"><path d="M2 7h56M92 7h56" stroke="#B99A6A" stroke-width="1"/><path d="M75 1l6 6-6 6-6-6z" fill="#B99A6A"/><circle cx="62" cy="7" r="2" fill="#B99A6A"/><circle cx="88" cy="7" r="2" fill="#B99A6A"/></svg>
+    <ul class="prog" id="prog"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Pakaian</h2>
+    <svg class="orn" viewBox="0 0 150 14"><path d="M2 7h56M92 7h56" stroke="#B99A6A" stroke-width="1"/><path d="M75 1l6 6-6 6-6-6z" fill="#B99A6A"/><circle cx="62" cy="7" r="2" fill="#B99A6A"/><circle cx="88" cy="7" r="2" fill="#B99A6A"/></svg>
+    <div class="swatches" id="swatches"></div>
+    <div class="dress-name" id="dressName"></div>
+    <p class="center muted" id="dressNote"></p>
+  </section>
+
+  <section class="card">
+    <h2>Penginapan</h2>
+    <svg class="orn" viewBox="0 0 150 14"><path d="M2 7h56M92 7h56" stroke="#B99A6A" stroke-width="1"/><path d="M75 1l6 6-6 6-6-6z" fill="#B99A6A"/><circle cx="62" cy="7" r="2" fill="#B99A6A"/><circle cx="88" cy="7" r="2" fill="#B99A6A"/></svg>
+    <div id="stay"></div>
+  </section>
+
+  <section class="card" id="rsvp">
+    <h2>Pengesahan</h2>
+    <svg class="orn" viewBox="0 0 150 14"><path d="M2 7h56M92 7h56" stroke="#B99A6A" stroke-width="1"/><path d="M75 1l6 6-6 6-6-6z" fill="#B99A6A"/><circle cx="62" cy="7" r="2" fill="#B99A6A"/><circle cx="88" cy="7" r="2" fill="#B99A6A"/></svg>
+    <p class="center muted" id="rsvpLead"></p>
+
+    <form id="form" autocomplete="on">
+      <label for="name">Nama</label>
+      <input type="text" id="name" maxlength="60" placeholder="cth. Pak Long sekeluarga" required>
+
+      <label>Boleh hadir?</label>
+      <div class="choice" id="attend">
+        <button type="button" data-v="1" aria-pressed="false">Ya, hadir</button>
+        <button type="button" data-v="0" aria-pressed="false">Tidak dapat</button>
+      </div>
+
+      <div id="countsBox" class="hidden">
+        <label>Bilangan</label>
+        <div class="stepper"><span>Dewasa</span><div class="ctl"><button type="button" data-k="adults" data-d="-1" aria-label="Kurang dewasa">−</button><output id="adults">1</output><button type="button" data-k="adults" data-d="1" aria-label="Tambah dewasa">+</button></div></div>
+        <div class="stepper" style="margin-top:10px"><span>Kanak-kanak</span><div class="ctl"><button type="button" data-k="children" data-d="-1" aria-label="Kurang kanak-kanak">−</button><output id="children">0</output><button type="button" data-k="children" data-d="1" aria-label="Tambah kanak-kanak">+</button></div></div>
+
+        <label>Perlukan homestay?</label>
+        <div class="choice" id="homestay">
+          <button type="button" data-v="1" aria-pressed="false">Ya</button>
+          <button type="button" data-v="0" aria-pressed="false">Tidak</button>
+        </div>
+      </div>
+
+      <label for="note">Nota <span class="muted" style="font-weight:400">(pilihan)</span></label>
+      <textarea id="note" maxlength="300" placeholder="cth. datang dari Johor, sampai malam Sabtu"></textarea>
+
+      <button class="submit" type="submit" id="submit">Hantar</button>
+      <div class="msg" id="msg" role="status"></div>
+    </form>
+
+    <div class="done hidden" id="done">
+      <div class="big">Terima kasih!</div>
+      <p id="doneText"></p>
+      <button class="link" type="button" id="edit">Ubah jawapan</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Senarai Rombongan</h2>
+    <svg class="orn" viewBox="0 0 150 14"><path d="M2 7h56M92 7h56" stroke="#B99A6A" stroke-width="1"/><path d="M75 1l6 6-6 6-6-6z" fill="#B99A6A"/><circle cx="62" cy="7" r="2" fill="#B99A6A"/><circle cx="88" cy="7" r="2" fill="#B99A6A"/></svg>
+    <div class="count"><b id="total">0</b><span class="muted" id="quotaText"></span></div>
+    <div class="bar"><i id="barFill" style="width:0"></i></div>
+    <ul class="who" id="who"></ul>
+    <p class="center muted" id="whoEmpty">Belum ada pengesahan lagi.</p>
+  </section>
+
+  <section class="card" id="contactsCard">
+    <h2>Hubungi</h2>
+    <svg class="orn" viewBox="0 0 150 14"><path d="M2 7h56M92 7h56" stroke="#B99A6A" stroke-width="1"/><path d="M75 1l6 6-6 6-6-6z" fill="#B99A6A"/><circle cx="62" cy="7" r="2" fill="#B99A6A"/><circle cx="88" cy="7" r="2" fill="#B99A6A"/></svg>
+    <ul class="contacts" id="contacts"></ul>
+  </section>
+
+  <footer>Fadzlan &amp; Aydina<small>31 · 01 · 2027</small></footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+/* ============================================================
+   SETTINGS: edit here
+   ============================================================ */
+const CONFIG = {
+  SUPABASE_URL: "https://uodvqytqgnfqbrllpvjd.supabase.co",
+  SUPABASE_KEY: "sb_publishable_pKI4prTDTU4bUT7RAKjF2Q_jqIMyDmJ",
+
+  venue: { name: "Jiwa Kajang", area: "Kajang, Selangor", search: "Jiwa Kajang" },
+
+  // one entry per family page; the page picks its side from the link (/hussienfamily, /meonfamily)
+  sides: {
+    hussien: { title: "Keluarga Hussien", quota: 16, contacts: [] },
+    meon:    { title: "Keluarga Meon",    quota: 16, contacts: [] },
+  },
+  // contacts look like: { name: "Fadzlan", role: "Pengantin lelaki", phone: "012 345 6789" }
+
+  // the groom's family programme on the day ("" time = shown as "TBC")
+  programme: [
+    { time: "",        what: "Berkumpul", note: "Masa & tempat berkumpul akan dimaklumkan" },
+    { time: "8:30 pg",  what: "Akad nikah", key: true },
+    { time: "9:30 pg",  what: "Sesi bergambar" },
+    { time: "11:00 pg", what: "Ketibaan tetamu" },
+    { time: "12:30 tgh", what: "Ketibaan pengantin", key: true },
+    { time: "12:45 tgh", what: "Makan beradab" },
+    { time: "1:20 ptg",  what: "Bergambar bersama keluarga pengantin lelaki", key: true },
+    { time: "3:30 ptg",  what: "Majlis bersurai" },
+  ],
+
+  dress: { name: "Hijau Pastel", colours: ["#DDEBD5", "#C7DDBB", "#B2CFA4"], note: "Untuk akad nikah dan persandingan. Baju Melayu, baju kurung atau seumpamanya." },
+
+  // homestay: set ready:true and fill in when booked
+  homestay: { ready: false, dates: "Sabtu 30 Jan – Ahad 31 Jan 2027", name: "", address: "", checkin: "", checkout: "", waze: "" },
+};
+
+/* ============================================================ */
+const $ = (id) => document.getElementById(id);
+const sideKey = (location.pathname.match(/(hussien|meon)/i) || [, new URLSearchParams(location.search).get("side") || "hussien"])[1].toLowerCase();
+const SIDE = CONFIG.sides[sideKey] || CONFIG.sides.hussien;
+const sb = window.supabase ? supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY) : null;
+const store = { get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
+const MINE = "af_family_" + sideKey;
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+document.title = SIDE.title + " · Fadzlan & Aydina";
+$("famName").textContent = SIDE.title;
+$("intro").innerHTML = `Halaman khas untuk <b>${esc(SIDE.title)}</b> yang menyertai rombongan pengantin lelaki. Semua maklumat majlis ada di sini. Mohon sahkan kehadiran di bahagian <a href="#rsvp" style="color:var(--rose)">Pengesahan</a>.`;
+
+// venue
+$("venueName").textContent = CONFIG.venue.name;
+$("venueArea").textContent = CONFIG.venue.area;
+const q = encodeURIComponent(CONFIG.venue.search);
+$("waze").href = "https://waze.com/ul?q=" + q + "&navigate=yes";
+$("gmaps").href = "https://www.google.com/maps/search/?api=1&query=" + q;
+
+// programme
+$("prog").innerHTML = CONFIG.programme.map(p =>
+  `<li class="${p.key ? "key" : ""}"><time>${esc(p.time || "TBC")}</time><span>${esc(p.what)}${p.note ? `<small>${esc(p.note)}</small>` : ""}</span></li>`).join("");
+
+// dress
+$("swatches").innerHTML = CONFIG.dress.colours.map(c => `<i style="background:${c}"></i>`).join("");
+$("dressName").textContent = CONFIG.dress.name;
+$("dressNote").textContent = CONFIG.dress.note;
+
+// homestay
+const H = CONFIG.homestay;
+$("stay").innerHTML = H.ready
+  ? `<p class="center"><b style="font-size:20px">${esc(H.name)}</b><br><span class="muted">${esc(H.address)}</span></p>
+     <p class="center">Daftar masuk: <b>${esc(H.checkin)}</b><br>Daftar keluar: <b>${esc(H.checkout)}</b></p>
+     ${H.waze ? `<div class="btns"><a class="btn solid" href="${esc(H.waze)}" target="_blank" rel="noopener">Waze ke homestay</a></div>` : ""}`
+  : `<div class="soon"><b>Akan dimaklumkan</b>Kami sedang menempah homestay berhampiran ${esc(CONFIG.venue.name)} untuk ${esc(H.dates)}.<br>Sila tandakan di bahagian pengesahan jika perlukan tempat menginap.</div>`;
+
+// contacts
+const icoWa = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>';
+const icoCall = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>';
+if (!SIDE.contacts.length) $("contactsCard").classList.add("hidden");
+$("contacts").innerHTML = SIDE.contacts.map(c => {
+  const d = c.phone.replace(/\D/g, ""), intl = d.startsWith("0") ? "6" + d : d;
+  return `<li><div class="w"><b>${esc(c.name)}</b><span>${esc(c.role || "")}</span></div>
+    <a class="wa" href="https://wa.me/${intl}" target="_blank" rel="noopener" aria-label="WhatsApp ${esc(c.name)}">${icoWa}</a>
+    <a class="call" href="tel:+${intl}" aria-label="Telefon ${esc(c.name)}">${icoCall}</a></li>`;
+}).join("");
+
+// ---------- RSVP ----------
+$("rsvpLead").textContent = `Setiap keluarga hanya perlu isi sekali. Tempat terhad kepada ${SIDE.quota} orang untuk ${SIDE.title}.`;
+const state = { attending: null, homestay: null, adults: 1, children: 0 };
+const pick = (box, key) => $(box).addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  state[key] = b.dataset.v === "1";
+  [...$(box).children].forEach(x => x.setAttribute("aria-pressed", x === b));
+  if (key === "attending") $("countsBox").classList.toggle("hidden", !state.attending);
+});
+pick("attend", "attending"); pick("homestay", "homestay");
+document.querySelectorAll(".stepper button").forEach(b => b.addEventListener("click", () => {
+  const k = b.dataset.k, min = k === "adults" ? 1 : 0;
+  state[k] = Math.max(min, Math.min(20, state[k] + Number(b.dataset.d))); $(k).textContent = state[k];
+}));
+function setForm(r) {
+  $("name").value = r.name || ""; $("note").value = r.note || "";
+  state.attending = r.attending; state.homestay = r.homestay; state.adults = r.adults || 1; state.children = r.children || 0;
+  $("adults").textContent = state.adults; $("children").textContent = state.children;
+  [...$("attend").children].forEach(x => x.setAttribute("aria-pressed", String(r.attending) === String(x.dataset.v === "1") && r.attending != null));
+  [...$("homestay").children].forEach(x => x.setAttribute("aria-pressed", String(r.homestay) === String(x.dataset.v === "1") && r.homestay != null));
+  $("countsBox").classList.toggle("hidden", !r.attending);
+}
+function showDone(r) {
+  $("form").classList.add("hidden"); $("done").classList.remove("hidden");
+  $("doneText").textContent = r.attending
+    ? `${r.name}: ${r.adults} dewasa${r.children ? ", " + r.children + " kanak-kanak" : ""}${r.homestay ? " · perlukan homestay" : ""}. Jumpa di majlis nanti!`
+    : `${r.name}: tidak dapat hadir. Terima kasih kerana memaklumkan.`;
+}
+$("edit").onclick = () => { $("done").classList.add("hidden"); $("form").classList.remove("hidden"); };
+
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const msg = $("msg"); msg.className = "msg"; msg.textContent = "";
+  const name = $("name").value.trim();
+  if (!name) { msg.className = "msg err"; msg.textContent = "Sila isi nama."; return; }
+  if (state.attending == null) { msg.className = "msg err"; msg.textContent = "Sila pilih sama ada boleh hadir."; return; }
+  if (state.attending && state.homestay == null) { msg.className = "msg err"; msg.textContent = "Sila pilih sama ada perlukan homestay."; return; }
+  const mine = store.get(MINE) || {};
+  const r = { name, attending: state.attending, adults: state.attending ? state.adults : 0, children: state.attending ? state.children : 0,
+              homestay: state.attending ? state.homestay : false, note: $("note").value.trim() };
+  $("submit").disabled = true;
+  try {
+    if (!sb) throw new Error("offline");
+    const { data, error } = await sb.rpc("family_rsvp_save", { p_side: sideKey, p_id: mine.id || null, p_key: mine.key || null,
+      p_name: r.name, p_attending: r.attending, p_adults: r.adults, p_children: r.children, p_homestay: r.homestay, p_note: r.note });
+    if (error) throw error;
+    store.set(MINE, { id: data.id, key: data.key, ...r });
+    showDone(r); loadList();
+  } catch (err) {
+    msg.className = "msg err"; msg.textContent = "Maaf, tidak dapat dihantar. Cuba lagi sebentar.";
+  } finally { $("submit").disabled = false; }
+});
+
+async function loadList() {
+  if (!sb) return;
+  const { data, error } = await sb.rpc("family_rsvp_list", { p_side: sideKey });
+  if (error || !data) return;
+  const rows = data.rows || [];
+  const total = rows.filter(r => r.attending).reduce((s, r) => s + r.adults + r.children, 0);
+  $("total").textContent = total;
+  $("quotaText").textContent = `/ ${SIDE.quota} orang`;
+  $("barFill").style.width = Math.min(100, total / SIDE.quota * 100) + "%";
+  $("who").innerHTML = rows.map(r => `<li class="${r.attending ? "" : "no"}"><span class="n">${esc(r.name)}</span><span class="p">${r.attending
+    ? r.adults + " dewasa" + (r.children ? ", " + r.children + " kanak" : "") : "tidak hadir"}</span></li>`).join("");
+  $("whoEmpty").classList.toggle("hidden", rows.length > 0);
+}
+$("quotaText").textContent = `/ ${SIDE.quota} orang`;
+const saved = store.get(MINE);
+if (saved && saved.id) { setForm(saved); showDone(saved); }
+loadList();
+</script>
+</body>
+</html>
