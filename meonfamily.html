@@ -168,7 +168,7 @@
 
     <form id="form" autocomplete="on">
       <label for="name">Nama</label>
-      <input type="text" id="name" maxlength="60" placeholder="cth. Pak Long sekeluarga" required>
+      <input type="text" id="name" maxlength="60" required>
 
       <label>Boleh hadir?</label>
       <div class="choice" id="attend">
@@ -177,9 +177,8 @@
       </div>
 
       <div id="countsBox" class="hidden">
-        <label>Bilangan</label>
+        <label>Bilangan dewasa</label>
         <div class="stepper"><span>Dewasa</span><div class="ctl"><button type="button" data-k="adults" data-d="-1" aria-label="Kurang dewasa">−</button><output id="adults">1</output><button type="button" data-k="adults" data-d="1" aria-label="Tambah dewasa">+</button></div></div>
-        <div class="stepper" style="margin-top:10px"><span>Kanak-kanak</span><div class="ctl"><button type="button" data-k="children" data-d="-1" aria-label="Kurang kanak-kanak">−</button><output id="children">0</output><button type="button" data-k="children" data-d="1" aria-label="Tambah kanak-kanak">+</button></div></div>
 
         <label>Nak guna homestay untuk bersiap?</label>
         <div class="choice" id="homestay">
@@ -233,8 +232,8 @@ const CONFIG = {
 
   // one entry per family page; the page picks its side from the link (/hussienfamily, /meonfamily)
   sides: {
-    hussien: { title: "Keluarga Hussien", quota: 16, contacts: [] },
-    meon:    { title: "Keluarga Meon",    quota: 16, contacts: [] },
+    hussien: { title: "Keluarga Hussien", quota: 16, example: "cth. Cik Yah", contacts: [] },
+    meon:    { title: "Keluarga Meon",    quota: 16, example: "cth. Mak Long", contacts: [] },
   },
   // contacts look like: { name: "Fadzlan", role: "Pengantin lelaki", phone: "012 345 6789" }
 
@@ -306,7 +305,8 @@ $("contacts").innerHTML = SIDE.contacts.map(c => {
 }).join("");
 
 // ---------- RSVP ----------
-$("rsvpLead").textContent = `Setiap keluarga hanya perlu isi sekali. Tempat terhad kepada ${SIDE.quota} orang untuk ${SIDE.title}.`;
+$("rsvpLead").innerHTML = `Setiap keluarga hanya perlu isi sekali. Tempat terhad kepada ${SIDE.quota} orang untuk ${esc(SIDE.title)}.<br><b>Mohon maaf, kanak-kanak tidak dibenarkan.</b>`;
+$("name").placeholder = SIDE.example || "";
 const state = { attending: null, homestay: null, adults: 1, children: 0 };
 const pick = (box, key) => $(box).addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
@@ -321,8 +321,8 @@ document.querySelectorAll(".stepper button").forEach(b => b.addEventListener("cl
 }));
 function setForm(r) {
   $("name").value = r.name || ""; $("note").value = r.note || "";
-  state.attending = r.attending; state.homestay = r.homestay; state.adults = r.adults || 1; state.children = r.children || 0;
-  $("adults").textContent = state.adults; $("children").textContent = state.children;
+  state.attending = r.attending; state.homestay = r.homestay; state.adults = r.adults || 1; state.children = 0;
+  $("adults").textContent = state.adults;
   [...$("attend").children].forEach(x => x.setAttribute("aria-pressed", String(r.attending) === String(x.dataset.v === "1") && r.attending != null));
   [...$("homestay").children].forEach(x => x.setAttribute("aria-pressed", String(r.homestay) === String(x.dataset.v === "1") && r.homestay != null));
   $("countsBox").classList.toggle("hidden", !r.attending);
