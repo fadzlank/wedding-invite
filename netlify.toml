@@ -1,2 +1,5 @@
 # every guest code (e.g. /aydina-test, /jemput) shows the invite
-/*    /index.html   200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

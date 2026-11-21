@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wedding-invite",
+  "compatibility_date": "2026-11-19",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".",
+    // every guest code (e.g. /aydina-test, /jemput) shows the invite
+    "not_found_handling": "single-page-application"
+  }
+}
