@@ -14,7 +14,7 @@ jobs:
         run: |
           code=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
             "https://uodvqytqgnfqbrllpvjd.supabase.co/rest/v1/rpc/family_rsvp_list" \
-            -H "apikey: sb_publishable_pKI4prTDTU4bUT7RAKjF2Q_jqIMyDmJ" -H "Authorization: Bearer sb_publishable_pKI4prTDTU4bUT7RAKjF2Q_jqIMyDmJ" \
+            -H "apikey: sb_publishable_pKI4prTDTU4bUT7RAKjF2Q_jqIMyDmJ" \
             -H "Content-Type: application/json" -d '{"p_side":"meon"}')
           echo "Supabase answered: $code"
           test "$code" = "200"
