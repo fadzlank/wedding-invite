@@ -300,7 +300,7 @@ $("contacts").innerHTML = SIDE.contacts.map(c => {
 }).join("");
 
 // ---------- RSVP ----------
-$("rsvpLead").innerHTML = `Setiap keluarga hanya perlu isi sekali. Tempat terhad kepada ${SIDE.quota} orang untuk ${esc(SIDE.title)}.<br><b>Mohon maaf, kanak-kanak tidak dibenarkan.</b>`;
+$("rsvpLead").innerHTML = `Setiap keluarga hanya perlu isi sekali. Tempat terhad kepada ${SIDE.quota} orang untuk ${esc(SIDE.title)}.<br><span style="font-size:15px"><b>Nota:</b> kanak-kanak tidak dibenarkan semasa majlis akad nikah.</span>`;
 $("name").placeholder = SIDE.example || "";
 const state = { attending: null, homestay: null, adults: 1, children: 0 };
 const pick = (box, key) => $(box).addEventListener("click", e => {
