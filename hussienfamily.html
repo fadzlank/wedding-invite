@@ -354,7 +354,7 @@ async function loadList() {
   if (!sb) return;
   const { data, error } = await sb.rpc("family_rsvp_list", { p_side: sideKey });
   if (error || !data) return;
-  const rows = data.rows || [];
+  const rows = (data.rows || []).filter(r => r.attending);   // only show who is coming
   const total = rows.filter(r => r.attending).reduce((s, r) => s + r.adults + r.children, 0);
   $("total").textContent = total;
   $("quotaText").textContent = `/ ${SIDE.quota} orang`;
