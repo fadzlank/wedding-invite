@@ -1,0 +1,20 @@
+# Keeps the free Supabase project awake: it pauses after ~7 days with no activity,
+# which makes every invite link show "jemputan tidak dijumpai".
+# Runs every 3 days and makes one tiny read. The key below is the public one already in the website.
+name: Keep Supabase awake
+on:
+  schedule:
+    - cron: "17 1 */3 * *"     # 09:17 Malaysia time, every 3 days
+  workflow_dispatch: {}          # lets you run it by hand from the Actions tab
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            "https://uodvqytqgnfqbrllpvjd.supabase.co/rest/v1/rpc/family_rsvp_list" \
+            -H "apikey: sb_publishable_pKI4prTDTU4bUT7RAKjF2Q_jqIMyDmJ" -H "Authorization: Bearer sb_publishable_pKI4prTDTU4bUT7RAKjF2Q_jqIMyDmJ" \
+            -H "Content-Type: application/json" -d '{"p_side":"meon"}')
+          echo "Supabase answered: $code"
+          test "$code" = "200"

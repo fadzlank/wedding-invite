@@ -191,7 +191,8 @@
     <div class="done hidden" id="done">
       <div class="big">Terima kasih!</div>
       <p id="doneText"></p>
-      <button class="link" type="button" id="edit">Ubah jawapan</button>
+      <button class="link" type="button" id="edit">Ubah jawapan</button><br>
+      <button class="link" type="button" id="another">+ Isi untuk keluarga lain</button>
     </div>
   </section>
 
@@ -327,6 +328,13 @@ function showDone(r) {
     : `${r.name}: tidak dapat hadir. Terima kasih kerana memaklumkan.`;
 }
 $("edit").onclick = () => { $("done").classList.add("hidden"); $("form").classList.remove("hidden"); };
+// one phone can fill in for several families (e.g. a PIC): start a fresh entry instead of editing the last one
+$("another").onclick = () => {
+  try { localStorage.removeItem(MINE); } catch {}
+  setForm({ name: "", note: "", attending: null, adults: 1 });
+  $("msg").textContent = "";
+  $("done").classList.add("hidden"); $("form").classList.remove("hidden"); $("name").focus();
+};
 
 $("form").addEventListener("submit", async (e) => {
   e.preventDefault();
