@@ -180,7 +180,7 @@
         <label>Bilangan dewasa</label>
         <div class="stepper"><span>Dewasa</span><div class="ctl"><button type="button" data-k="adults" data-d="-1" aria-label="Kurang dewasa">−</button><output id="adults">1</output><button type="button" data-k="adults" data-d="1" aria-label="Tambah dewasa">+</button></div></div>
 
-        <label>Nak guna homestay untuk bersiap?</label>
+        <label>Nak berehat di homestay selepas nikah?</label>
         <div class="choice" id="homestay">
           <button type="button" data-v="1" aria-pressed="false">Ya</button>
           <button type="button" data-v="0" aria-pressed="false">Tidak</button>
@@ -288,10 +288,10 @@ $("dressNote").textContent = CONFIG.dress.note;
 const H = CONFIG.homestay;
 $("stay").innerHTML = H.ready
   ? `<p class="center"><b style="font-size:20px">${esc(H.name)}</b><br><span class="muted">${esc(H.address)}</span></p>
-     <p class="center muted">Tempat berehat, bersiap dan menukar pakaian pada hari majlis.</p>
+     <p class="center muted">Untuk keluarga berehat selepas akad nikah, sebelum majlis bersanding.</p>
      <p class="center">Boleh masuk dari: <b>${esc(H.checkin)}</b><br>Sehingga: <b>${esc(H.checkout)}</b></p>
      ${H.waze ? `<div class="btns"><a class="btn solid" href="${esc(H.waze)}" target="_blank" rel="noopener">Waze ke homestay</a></div>` : ""}`
-  : `<div class="soon"><b>Akan dimaklumkan</b>Kami sedang menempah homestay berhampiran ${esc(CONFIG.venue.name)} untuk ${esc(H.dates)}, sebagai tempat untuk berehat, bersiap dan menukar pakaian sebelum majlis. Bukan untuk bermalam.<br>Sila tandakan di bahagian pengesahan jika mahu menggunakannya.</div>`;
+  : `<div class="soon"><b>Akan dimaklumkan</b>Kami sedang mencari homestay berhampiran ${esc(CONFIG.venue.name)} untuk kegunaan keluarga berehat selepas akad nikah dan sebelum majlis bersanding (${esc(H.dates)}). Bukan untuk bermalam.<br>Sila tandakan di bahagian pengesahan jika mahu menggunakannya.</div>`;
 
 // contacts
 const icoWa = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>';
@@ -330,7 +330,7 @@ function setForm(r) {
 function showDone(r) {
   $("form").classList.add("hidden"); $("done").classList.remove("hidden");
   $("doneText").textContent = r.attending
-    ? `${r.name}: ${r.adults} dewasa${r.children ? ", " + r.children + " kanak-kanak" : ""}${r.homestay ? " · guna homestay untuk bersiap" : ""}. Jumpa di majlis nanti!`
+    ? `${r.name}: ${r.adults} dewasa${r.children ? ", " + r.children + " kanak-kanak" : ""}${r.homestay ? " · berehat di homestay" : ""}. Jumpa di majlis nanti!`
     : `${r.name}: tidak dapat hadir. Terima kasih kerana memaklumkan.`;
 }
 $("edit").onclick = () => { $("done").classList.add("hidden"); $("form").classList.remove("hidden"); };
